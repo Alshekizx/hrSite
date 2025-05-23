@@ -1,0 +1,185 @@
+'use client';
+import Image from "next/image";
+import AnotherHrSection from "../components/ourHrServiceComponent/anotherHrSolution";
+import HeroSection from "../components/ourHrServiceComponent/heroSection";
+
+export default function OurHrExperties() {
+ 
+const hrData = {
+    title: 'Auto-Enrolment Pension Scheme',
+    description: `Ireland’s My Future Fund auto-enrolment scheme begins on 30 September 2025, enrolling private sector workers not already in a pension. Contributions come from both employers and employees, with an opt-out allowed after six months.
+    \nMployus offers expert support to help businesses set up and manage the scheme, ensuring compliance and clear communication with staff.`,
+    image: '/images/eded1.png',
+    reverse: true,
+  };
+
+  const hrData2 = {
+    title: 'Disciplinary and Grievance Procedures',
+    description: `Disciplinary and grievance procedures are essential for addressing workplace issues fairly and consistently. These are governed by the Unfair Dismissals Acts 1977–2015 and the Workplace Relations Commission (WRC) Code of Practice on Grievance and Disciplinary Procedures.
+        \nWe help businesses develop and implement these procedures, ensuring compliance with legal standards while minimizing the risk of claims related to unfair dismissal or disputes.`,
+    image: '/images/eded2.png',
+    reverse: false,
+  };
+
+  const hrData3 = {
+    title: 'Terms and Conditions of Employment',
+    description: `Terms and conditions of employment are crucial for defining the relationship between employers and employees. Governed by the Terms of Employment (Information) Acts 1994–2014, employers are required to provide written terms to employees within two months of employment.
+        \nWe assist businesses in creating clear, compliant employment contracts that outline employee rights, responsibilities, and benefits, ensuring full legal adherence.`,
+    image: '/images/eded3.png',
+    reverse: true,
+  };
+
+  const hrData4 = {
+    title: 'Employee Policies and Procedures',
+    description: `Employee policies and procedures guide workplace behaviour and expectations. They must comply with Irish employment laws such as the Employment Equality Acts 1998-2015.
+            \n We specialise in creating tailored policies that cover workplace conduct, anti-discrimination practices, and grievance procedures, ensuring legal compliance and a harmonious workplace environment.`,
+    image: '/images/eded4.png',
+    reverse: false,
+  };
+
+  const hrData5 = {
+    title: 'Redundancy',
+    description: `Redundancy arises when positions are no longer required, and in Ireland, it is governed by the Redundancy Payments Acts 1967–2014. Mployus provides businesses with guidance on the redundancy process, including fair selection, employee communication, and compliance with statutory redundancy payments.
+               \nWe ensure that the process is handled fairly, minimising legal risks and maintaining employee relations.`,
+    image: '/images/eded5.png',
+    reverse: true,
+  };
+
+  const hrData6 = {
+    title: 'Performance Management',
+    description: `Effective performance management systems are vital for aligning employee performance with business goals. While no specific Irish legislation governs performance management, Mployus ensures compliance with broader employment laws such as the Employment Equality Acts when implementing performance evaluation systems.
+    \nWe help businesses create tailored performance management frameworks that foster continuous improvement and employee accountability.`,
+    image: '/images/eded6.png',
+    reverse: false,
+  };
+
+  const hrData7 = {
+    title: 'HR Investigation',
+    description: `HR investigations are essential for addressing allegations of misconduct and ensuring fair treatment. These investigations are guided by the Employment Equality Acts and the Workplace Relations Act.
+    \nWe support businesses by conducting impartial investigations, ensuring that procedures are compliant with Irish employment law and that the findings are properly documented.`,
+    image: '/images/eded7.png',
+    reverse: true,
+  };
+
+  const hrData8 = {
+    title: 'Employee Statutory Rights',
+    description: `Employee statutory rights cover a range of protections, including minimum wage, sick leave, and holiday entitlements, all governed by Irish law, particularly the National Minimum Wage Act 2000 and the Organisation of Working Time Act 1997.
+    \nWe help businesses ensure they comply with these legal obligations, offering guidance on employee entitlements and supporting businesses in maintaining a fair and legally compliant work environment.`,
+    image: '/images/eded8.png',
+    reverse: false,
+  };
+
+  const hrData9 = {
+    title: 'TUPE',
+    description: `The Transfer of Undertakings (Protection of Employment) Regulations (TUPE) protects employees' rights during business transfers. Mployus provides expert guidance on TUPE, ensuring compliance with legal obligations during mergers, acquisitions, or outsourcing.
+    \nOur team helps businesses manage the transfer of employees' terms and conditions, safeguarding continuity of employment and minimizing legal risks`,
+    image: '/images/eded9.png',
+    reverse: true,
+  };
+
+  const hrData10 = {
+    title: 'Working Arrangements',
+    description: `Working arrangements cover aspects like working hours and flexible schedules, governed by the Organisation of Working Time Act 1997. Mployus assists businesses in implementing effective working arrangements, ensuring compliance with Irish laws and promoting work-life balance.
+    \nWe offer advice on setting up policies that align with legal requirements while boosting productivity and employee satisfaction.`,
+    image: '/images/eded10.png',
+    reverse: false,
+  };
+
+  const hrData11 = {
+    title: 'Reducing Absenteeism',
+    description: `Reducing absenteeism is crucial for maintaining a productive workforce. Irish legislation, including the Workplace Relations Commission (WRC) guidelines, provides frameworks for managing absenteeism.
+    \nWe help businesses reduce absenteeism through comprehensive absence management strategies, ensuring compliance with statutory rights while promoting employee health and reducing workplace disruption.`,
+    image: '/images/eded11.png',
+    reverse: true,
+  };
+
+  return (
+    <div className="pt-10 flex flex-col w-full gap-20 ">
+    <HeroSection
+      title="Our HR Expertise"
+      description="At MployUs, we deliver practical, compliant HR solutions tailored to Irish employment law. From auto-enrolment pensions to TUPE transfers, we support businesses through every stage of the employee lifecycle."
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Our HR Expertise' },
+        { label: '' },
+      ]}
+    />
+
+    <AnotherHrSection {...hrData} />
+    <AnotherHrSection {...hrData2} />
+    <AnotherHrSection {...hrData3} />
+    <AnotherHrSection {...hrData4} />
+    <AnotherHrSection {...hrData5} />
+    <AnotherHrSection {...hrData6} />
+    <AnotherHrSection {...hrData7} />
+    <AnotherHrSection {...hrData8} />
+    <AnotherHrSection {...hrData9} />
+    <AnotherHrSection {...hrData10} />
+    <AnotherHrSection {...hrData11} />
+
+    <div className="containerDiv ">
+<div className="rounded-lg bg-[var(--primary-100)] flex flex-col items-center p-10">
+      <div className="text-center w-full max-w-[700px] ">
+          <h3 className="text-[var(--primary-color)] text-2xl font-bold">Contact Us</h3>
+          <p className="text-base">
+            Feel free to use the form or drop us an email. Phone calls also work too.
+          </p>
+          
+      </div>
+<div className="flex justify-center gap-6 flex-wrap lg:flex-nowrap">
+  {/* Image Section */}
+  <div className="hidden lg:flex w-full lg:w-1/2 justify-center items-center p-10 relative overflow-hidden min-h-[100px]">
+    <Image
+      src="/images/contactFormImg2.png"
+      alt="Contact Form Illustration"
+      width={500}
+      height={500}
+      className="object-contain"
+      priority
+    />
+  </div>
+
+  {/* Form Section */}
+  <div className="w-full lg:w-1/2 flex items-center ">
+    <form className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 w-full">
+      <div>
+        <label className="block mb-2 font-medium text-[var(--text-dark)]">First Name</label>
+        <input
+          type="text"
+          placeholder="John"
+          className="w-full p-4 border border-[var(--border-color)] custom-ring-color"
+        />
+      </div>
+
+      <div>
+        <label className="block mb-2 font-medium text-[var(--text-dark)]">Email Address</label>
+        <input
+          type="email"
+          placeholder="email@example.com"
+          className="w-full p-4 border border-[var(--border-color)] custom-ring-color"
+        />
+      </div>
+
+    <div className="md:col-span-2">
+    <label className="block mb-2 font-medium text-[var(--text-dark)]">Message</label>
+    <textarea
+        placeholder="Type your message"
+        rows={6}
+        className="w-full p-4 border border-[var(--border-color)] custom-ring-color resize-none"
+    ></textarea>
+    </div>
+
+      <div className="md:col-span-2">
+        <button type="submit" className="w-full button py-3" style={{ borderRadius: "5px", padding: '15px' }}>
+          Book Free Consultation
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+    </div>
+      
+    </div>
+  );
+}

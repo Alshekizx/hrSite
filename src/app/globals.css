@@ -1,0 +1,339 @@
+@import "tailwindcss";
+
+
+
+:root {
+  --header-color: #F5F9FF; /* Light background from header area */
+  
+  /* Primary Color (used in CTAs, icons, and highlights) */
+  --primary-color: #0A53BE; /* Strong blue */
+  --primary-100: #E6F0FF;   /* Very light blue tint */
+  --primary-200: #B3D1FF;   /* Soft blue tint */
+  --primary-300: #66A2FF;   /* Mid-light blue */
+  --primary-400: #3380FF; 
+  
+
+  --primaryTrans-color: #0A53BE66; /* 40% opacity of primary */
+
+  /* Secondary Gray Colors (text, FAQ accordion borders, etc.) */
+  --secondary-color: #6C757D; 
+  --secondary-100: #F1F3F5;
+  --secondary-200: #D7DBDF;
+  --secondary-300: #ADB5BD;
+  --secondary-400: #868E96;
+
+  /* Background and UI */
+  --background: #F8F9FA; /* Site background color */
+  --background-light: linear-gradient(135deg, #f2f6fc 0%, #e8f1ff 100%);
+  
+  --text-dark: #212529;      /* For strong headings */
+  --text-muted: #6C757D;     /* Muted paragraph text */
+  
+  --card-bg: #ffffff;
+  --card-Trans: #F5F9FFCC;  /* Semi-transparent card background */
+  
+  --border-color: #E0E6ED;  /* Light border color seen in cards */
+  --accent-color: #ffa137;  /* Purple used for icons or highlight in buttons */
+  --foreground: #111111;
+  
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-text: var(--text-dark);
+  --color-text-muted: var(--text-muted);
+  --color-card-bg: var(--card-bg);
+  --color-card-trans: var(--card-Trans);
+  --color-border: var(--border-color);
+
+  --color-header: var(--header-color);
+  
+  /* Primary Colors */
+  --color-primary: var(--primary-color);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-color);
+  --color-primaryTrans: var(--primaryTrans-color);
+
+  /* Secondary Colors */
+  --color-secondary: var(--secondary-color);
+  --color-secondary-100: var(--secondary-100);
+  --color-secondary-200: var(--secondary-200);
+  --color-secondary-300: var(--secondary-300);
+  --color-secondary-400: var(--secondary-400);
+  --color-secondary-500: var(--secondary-color);
+  --color-accent: var(--accent-color);
+ 
+}
+
+@media (prefers-color-scheme: dark) {
+ :root {
+  --header-color: #F5F9FF; /* Light background from header area */
+  
+  /* Primary Color (used in CTAs, icons, and highlights) */
+  --primary-color: #0A53BE; /* Strong blue */
+  --primary-100: #E6F0FF;   /* Very light blue tint */
+  --primary-200: #B3D1FF;   /* Soft blue tint */
+  --primary-300: #66A2FF;   /* Mid-light blue */
+  --primary-400: #3380FF;   /* Medium blue */
+
+  --primaryTrans-color: #0A53BE66; /* 40% opacity of primary */
+
+  /* Secondary Gray Colors (text, FAQ accordion borders, etc.) */
+  --secondary-color: #6C757D; 
+  --secondary-100: #F1F3F5;
+  --secondary-200: #D7DBDF;
+  --secondary-300: #ADB5BD;
+  --secondary-400: #868E96;
+
+  /* Background and UI */
+  --background: #F8F9FA; /* Site background color */
+  --background-light: linear-gradient(135deg, #f2f6fc 0%, #e8f1ff 100%);
+  
+  --text-dark: #212529;      /* For strong headings */
+  --text-muted: #6C757D;     /* Muted paragraph text */
+  
+  --card-bg: #ffffff;
+  --card-Trans: #F5F9FFCC;  /* Semi-transparent card background */
+  
+  --border-color: #E0E6ED;  /* Light border color seen in cards */
+  --accent-color: #ffa137;  /* Purple used for icons or highlight in buttons */
+  --foreground: #111111;
+}
+  }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+h1, h2{
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+h1 {
+  font-size: 3rem; /* Increased from 2.5rem */
+}
+
+h2 {
+  font-size: 2.5rem; /* Increased from 2rem */
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 2rem; 
+   font-weight: 400;
+}
+
+p {
+  font-size: 1.125rem; /* Increased from 1rem */
+}
+ .links{
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 5px 0 ;
+  border-bottom: solid 2px transparent;
+ }
+  .links:hover {
+    color: var(--primary-color);
+    border-bottom: solid 2px var(--primary-color);
+  }
+
+   .footerLinks{
+  color: white;
+  text-decoration: none;
+ }
+  .footerLinks:hover{
+    text-decoration: underline;
+  }
+
+
+.button,
+.inverseButton {
+  font-size: 1rem; 
+  font-weight: 500;
+}
+
+
+
+.button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-400);
+  
+}
+
+.inverseButton {
+  background-color: var(--primary-100);
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border: solid 1px var(--primary-color);
+  border-radius: 2rem;
+  cursor: pointer;
+ 
+  transition: background-color 0.3s ease;
+}
+
+.inverseButton:hover {
+  background-color: var(--primary-400);
+  color: #fff;
+}
+
+
+.IconButton {
+  background-color: var(--primary-100);
+  color: var(--primary-color);
+  padding: 0.75rem ;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.IconButton:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.callToActionButton {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.callToActionButton:hover {
+  background-color: var(--accent-color);
+  color:  #ffffff;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.card2 {
+  background-color: var(--card-bg);
+  padding: 5rem 2rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.modalCard {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+.modalCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}
+
+.flatCard{
+  max-width: 1000px;
+  
+}
+
+.containerDiv{
+  padding: 2rem;
+  min-height: 90vh;
+  width: 100%;
+  
+}
+
+.bg_themed_color{
+  background-image: var(--background-light);;
+}
+
+.inner_Padding{
+  padding: 5rem 0;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.card-texture-bg {
+  background-image: url('/images/cardtexture3.png');
+  background-size: 120%;
+  background-position: center;
+}
+
+.card-texture-bg2 {
+  background-image: url('/images/cardtexture2.png');
+  background-size: 120%;
+  background-position: center;
+}
+
+.custom-ring-color {
+  --tw-ring-color: var(--primary-color);
+  outline: none;
+  background-color: white;
+ 
+}
+
+.custom-ring-color:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--tw-ring-color); /* this mimics `focus:ring-2` */
+}
