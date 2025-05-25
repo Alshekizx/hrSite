@@ -280,10 +280,16 @@ p {
 }
 
 .containerDiv{
-  padding: 2rem;
+  padding: 2rem 4rem;
   min-height: 90vh;
   width: 100%;
   
+}
+
+@media (max-width: 768px) {
+  .containerDiv {
+    padding: 2rem;
+  }
 }
 
 .bg_themed_color{

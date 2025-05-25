@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const ContactForm2 = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-stretch ">
+    <section className="flex  flex-col lg:flex-row items-stretch ">
       {/* Left: Form Section */}
-      <div className="w-full lg:w-1/2 bg-[var(--primary-100)] px-4 sm:px-6 md:px-8 py-16">
+      <div className="w-full lg:w-1/2 bg-[var(--primary-100)] px-[2rem] lg:pl-[5rem]  py-16">
         <div className="form-container border border-[var(--primary-color)] bg-white rounded-t-lg overflow-hidden flex flex-col h-full">
           <div className="py-6 px-6 bg-[var(--primary-color)] space-y-2">
             <p className="font-semibold text-white text-lg">Contact Us</p>
@@ -67,7 +67,7 @@ const ContactForm2 = () => {
       </div>
 
       {/* Right: Image Section (visible only on large screens) */}
-      <div className="hidden lg:flex w-full lg:w-1/2 justify-center items-center p-10 relative overflow-hidden min-h-[600px]">
+      <div className="hidden lg:flex w-full lg:w-1/2 justify-center items-center p-y px-[2rem] lg:pr-[5rem] relative overflow-hidden min-h-[600px]">
         <Image
           src="/images/contactFormImg2.png"
           alt="Contact Form Illustration"
