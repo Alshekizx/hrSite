@@ -144,6 +144,28 @@ const Footer = () => {
           <span>Ireland</span>
           <ChevronDownIcon className="w-4 h-4 ml-1 text-black" />
         </div>
+
+        <p className='mt-2'>Download our HR Mobile App</p>
+        <div className='flex items-center gap-4 mt-2'>
+          <Link href="#" className="text-white hover:text-gray-300 transition">
+          <Image
+            src="/images/GooglePlay.png"
+            alt="Google Play"
+            width={120}
+            height={40}
+            className=""
+          />
+          </Link>
+          <Link href="#" className="text-white hover:text-gray-300 transition">
+            <Image
+              src="/images/Apple.png"
+              alt="Apple Store"
+              width={120}
+              height={40}
+              className=""
+            />
+          </Link>
+        </div>
       </div>
     </div>
       </div>

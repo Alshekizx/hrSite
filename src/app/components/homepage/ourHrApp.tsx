@@ -14,7 +14,7 @@ export default function OuHrApps() {
     </div>
 
   {/* Image Section */}
-  <div className="absolute hidden md:flex flex-col justify-center items-center w-1/3 h-[100%]   right-5 top-0 ">
+  <div className="absolute hidden md:flex flex-col justify-center items-center w-1/3 h-[100%]   right-16 top-0 ">
     <Image
       src="/images/iPhone16Pro.png"
       alt="Other Recruitment Solutions"
