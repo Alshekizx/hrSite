@@ -137,7 +137,7 @@ export default function SectorsWeCover() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`cursor-pointer transition-all duration-300 ease-in-out min-w-[350px] h-screen p-6 border ${
+                className={`cursor-pointer transition-all duration-300 ease-in-out min-w-[350px] h-[90vh] p-6 border ${
                   index === selectedIndex
                     ? "border-[var(--primary-color)]"
                     : "border-white/20"

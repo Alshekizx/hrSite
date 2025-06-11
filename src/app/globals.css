@@ -33,7 +33,7 @@
   --card-Trans: #F5F9FFCC;  /* Semi-transparent card background */
   
   --border-color: #E0E6ED;  /* Light border color seen in cards */
-  --accent-color: #ffa137;  /* Purple used for icons or highlight in buttons */
+  --accent-color:  #FF3D00;  /* Purple used for icons or highlight in buttons */
   --foreground: #111111;
   
 }
@@ -102,13 +102,13 @@
   --card-Trans: #F5F9FFCC;  /* Semi-transparent card background */
   
   --border-color: #E0E6ED;  /* Light border color seen in cards */
-  --accent-color: #ffa137;  /* Purple used for icons or highlight in buttons */
+  --accent-color: #FF3D00;  /* Purple used for icons or highlight in buttons */
   --foreground: #111111;
 }
   }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: var(--text-dark);
@@ -281,7 +281,7 @@ p {
 
 .containerDiv{
   padding: 2rem 5rem;
-  min-height: 90vh;
+  min-height: 50vh;
   width: 100%;
   
 }
