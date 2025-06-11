@@ -34,8 +34,8 @@ export default function WhoWeSupport() {
           <p className="text-[var(--text-muted)] leading-relaxed text-base mb-6">
             We specialise in supporting small businesses and growing teams that need 
             expert HR guidance without the cost or complexity of an in-house HR department.
-            Whether you're a startup navigating your first hires or an established SME 
-            looking to stay compliant and build a great workplace culture, we’re here to help.
+            Whether you&apos;re a startup navigating your first hires or an established SME 
+            looking to stay compliant and build a great workplace culture, we&apos;re here to help.
           </p>
 
           <p className="mb-4">We support:</p>
@@ -53,7 +53,7 @@ export default function WhoWeSupport() {
         <p className="text-[var(--text-muted)] leading-relaxed mt-6 text-base">
           We act as your trusted HR partner, offering support tailored to your needs. 
           From contracts and handbooks to employee relations, absence management, 
-          performance issues, and compliance, we ensure you're protected and proactive.
+          performance issues, and compliance, we ensure you&apos;re protected and proactive.
         </p>
       </div>
     </div>
