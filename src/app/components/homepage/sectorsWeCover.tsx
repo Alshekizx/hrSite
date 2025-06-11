@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import { ArrowRightIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon, ArrowLeftIcon} from "@heroicons/react/24/solid";
 import Link from "next/link";
 
 export default function SectorsWeCover() {
@@ -103,15 +103,15 @@ export default function SectorsWeCover() {
         <div className="flex top-1/2 left-0 right-0 absolute z-20 justify-between items-center mb-6 px-4">
           <button
             onClick={() => scroll("left")}
-            className="bg-white/20 p-2 rounded-full hover:bg-white/30"
+            
           >
-            <ChevronLeftIcon className="h-6 w-6" />
+            <ArrowLeftIcon className="h-10 w-10 text-white/50 hover:text-white" />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="bg-white/20 p-2 rounded-full hover:bg-white/30"
+            
           >
-            <ChevronRightIcon className="h-6 w-6" />
+            <ArrowRightIcon className="h-10 w-10 text-white/50 hover:text-white" />
           </button>
         </div>
 
@@ -123,8 +123,8 @@ export default function SectorsWeCover() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/60 z-0"></div>
-          <h1 className="absolute top-10 left-10 " style={{color:"#ffffff99" }}>Industries</h1>
+          <div className="absolute inset-0 bg-black/50 z-0"></div>
+          <h1 className="absolute top-10 left-10 z-30  " style={{color:"#ffffffbb", fontWeight:'bold' }}>Industries</h1>
           <div
             ref={scrollRef}
             className="relative flex w-full z-10"
@@ -136,10 +136,10 @@ export default function SectorsWeCover() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`cursor-pointer transition-all duration-300 ease-in-out min-w-[350px] h-[90vh] p-6 border ${
+                className={`cursor-pointer transition-all duration-300 ease-in-out min-w-[350px] h-[95vh] p-6 border ${
                   index === selectedIndex
-                    ? "border-[var(--primary-color)]"
-                    : "border-white/20"
+                    ? "border-white/20 bg-black/50"
+                    : "border-white/20 bg-transparent"
                 }`}
                 onClick={() => {
                   setSelectedIndex(index);
@@ -150,7 +150,7 @@ export default function SectorsWeCover() {
                 }}
               >
                 <div className="flex flex-col h-full justify-end items-start text-start">
-                  <h3 className="text-xl font-semibold mb-2">
+                  <h3 className="text-xl font-bold mb-1">
                     {service.title}
                   </h3>
                   {index === selectedIndex && (
@@ -160,7 +160,7 @@ export default function SectorsWeCover() {
                       </p>
                       <Link
                         href={service.link}
-                        className="mt-2 flex items-center gap-2 text-[var(--primary-400)] hover:underline"
+                        className="mt-1 flex items-center gap-2 text-[var(--primary-400)] hover:underline"
                       >
                         <h3 >
                           Learn more

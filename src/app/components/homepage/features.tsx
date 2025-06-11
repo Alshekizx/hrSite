@@ -1,10 +1,19 @@
 'use client';
 import { useState } from 'react';
-import {
+import { 
   ClockIcon,
   MapPinIcon,
   AdjustmentsHorizontalIcon,
   DocumentTextIcon,
+  CurrencyDollarIcon,
+  ChartBarIcon,
+  CalendarDaysIcon,
+  UserGroupIcon,
+  BriefcaseIcon,
+  InboxIcon,
+  UserCircleIcon,
+  PencilSquareIcon,
+  CheckCircleIcon
 } from '@heroicons/react/24/outline';
 
 const featureData = {
@@ -29,88 +38,153 @@ const featureData = {
         desc: 'Restrict clock-ins to designated locations to prevent unauthorized remote check-ins.',
       },
       {
-        icon: DocumentTextIcon,
+        icon: ChartBarIcon,
         title: 'Detailed Attendance Reports',
         desc: 'Generate insights on employee punctuality, overtime, and attendance trends.',
       },
     ],
   },
+
   'Employee Expense Tracker': {
     title: 'Employee Expense Tracker',
     description:
-      'Track and manage employee expenses with real-time monitoring and approval workflows.',
+      'Simplify expense reporting and reimbursement with our Employee Expense Tracker—designed to improve accuracy, transparency, and financial control for HR and finance teams.',
     features: [
       {
-        icon: DocumentTextIcon,
-        title: 'Receipt Uploads',
-        desc: 'Employees can upload receipts directly from their phones.',
+        icon: InboxIcon,
+        title: 'Easy Submission',
+        desc: 'Employees can submit expenses directly through the app with receipts attached.',
       },
       {
-        icon: ClockIcon,
-        title: 'Real-Time Reimbursement',
-        desc: 'Automated expense approvals and instant reimbursements.',
+        icon: CheckCircleIcon,
+        title: 'Approval Workflow',
+        desc: 'Built-in approval flow to streamline and monitor reimbursements.',
+      },
+      {
+        icon: AdjustmentsHorizontalIcon,
+        title: 'Category-Based Tracking',
+        desc: 'Track expenses by type (e.g., travel, meals, supplies) for better reporting.',
+      },
+      {
+        icon: ChartBarIcon,
+        title: 'Real-Time Oversight',
+        desc: 'Gain visibility into spending trends, limits, and policy compliance.',
       },
     ],
   },
+
   'Rotas & Leave Management': {
     title: 'Rotas & Leave Management',
     description:
-      'Plan shifts and manage leave requests with smart scheduling tools and visibility.',
+      'Plan smarter and keep your team informed with our dynamic Rotas & Leave Management system designed to reduce scheduling conflicts, simplify time-off tracking, and keep operations running smoothly.',
     features: [
       {
-        icon: AdjustmentsHorizontalIcon,
-        title: 'Leave Calendar',
-        desc: 'See who is on leave and plan shifts accordingly.',
+        icon: CalendarDaysIcon,
+        title: 'Smart Shift Scheduling',
+        desc: 'Create, assign, and update employee shifts with ease—daily, weekly, or monthly.',
       },
       {
-        icon: DocumentTextIcon,
-        title: 'Auto Approvals',
-        desc: 'Configure rules for automatic leave approvals.',
+        icon: UserGroupIcon,
+        title: 'Real-Time Availability',
+        desc: 'See who’s available or off helping managers make better staffing decisions.',
+      },
+      {
+        icon: CheckCircleIcon,
+        title: 'Leave Requests & Approvals',
+        desc: 'Employees can request time off (sick, annual, TOIL, etc.) with built-in approval workflows.',
+      },
+      {
+        icon: CalendarDaysIcon,
+        title: 'Integrated Calendar View',
+        desc: 'Visualize shifts and leave in one clear calendar for improved planning.',
       },
     ],
   },
+
   'Manage Cashflow': {
     title: 'Cashflow Management',
     description:
-      'Visualize income and expenses to optimize budgeting and payroll.',
+      'Gain full visibility and control over your workforce expenses with our streamlined Cashflow Management tools helping you track, plan, and optimize spending with ease.',
     features: [
       {
-        icon: ClockIcon,
-        title: 'Real-Time Insights',
-        desc: 'Track cash inflows and outflows across departments.',
+        icon: CurrencyDollarIcon,
+        title: 'Expense Tracking',
+        desc: 'Employees can submit work-related expenses directly through the app for faster approvals and reimbursements.',
       },
       {
-        icon: MapPinIcon,
-        title: 'Custom Reports',
-        desc: 'Generate detailed reports on financial performance.',
+        icon: ChartBarIcon,
+        title: 'Automated Reports',
+        desc: 'View real-time summaries of spending trends and department costs.',
+      },
+      {
+        icon: AdjustmentsHorizontalIcon,
+        title: 'Budget Monitoring',
+        desc: 'Set limits and monitor team budgets to prevent overspending and support financial planning.',
+      },
+      {
+        icon: DocumentTextIcon,
+        title: 'Exportable Data',
+        desc: 'Easily download reports for accounting, audits, or payroll integration.',
       },
     ],
   },
+
   'Manage Job Vacancies': {
     title: 'Job Vacancy Management',
     description:
-      'Post and track job vacancies with integrated recruitment tools.',
+      'Simplify recruitment with our centralized Job Vacancy Management system helping you post roles, track applications, and streamline the entire hiring process from one platform.',
     features: [
       {
-        icon: DocumentTextIcon,
-        title: 'Custom Job Boards',
-        desc: 'Create and manage your own branded job listings.',
+        icon: BriefcaseIcon,
+        title: 'Multi-Channel Job Posting',
+        desc: 'Publish vacancies directly to your career page and connected job boards in one click.',
+      },
+      {
+        icon: AdjustmentsHorizontalIcon,
+        title: 'Role-Based Filtering',
+        desc: 'Easily organize applications by department, job type, or location.',
+      },
+      {
+        icon: InboxIcon,
+        title: 'Application Tracking',
+        desc: 'Monitor candidate progress from application to interview and final decision.',
+      },
+      {
+        icon: UserCircleIcon,
+        title: 'Candidate Database',
+        desc: 'Build and manage a searchable talent pool for current and future openings.',
       },
     ],
   },
+
   'Manage Job Candidates': {
     title: 'Candidate Management',
     description:
-      'Track candidate applications, schedule interviews, and manage hiring pipelines.',
+      'Simplify recruitment with a centralized system to track, organize, and manage job applicants—making hiring faster, smarter, and more efficient.',
     features: [
       {
-        icon: MapPinIcon,
-        title: 'Pipeline Tracking',
-        desc: 'Visualize and move candidates through your recruitment process.',
+        icon: UserCircleIcon,
+        title: 'Candidate Profiles',
+        desc: 'Keep all applicant information, resumes, and communication organized in one centralized view.',
+      },
+      {
+        icon: CalendarDaysIcon,
+        title: 'Interview Scheduling',
+        desc: 'Schedule and manage interviews with automated reminders.',
+      },
+      {
+        icon: CheckCircleIcon,
+        title: 'Application Tracking',
+        desc: 'Monitor each candidate’s progress through custom recruitment stages.',
+      },
+      {
+        icon: PencilSquareIcon,
+        title: 'Rating & Feedback',
+        desc: 'Collaborate with your team by rating applicants and leaving internal notes.',
       },
     ],
   },
-}as const;
+} as const;
 type FeatureKey = keyof typeof featureData;
 
 export default function Features() {
@@ -165,23 +239,32 @@ const currentData = featureData[selectedFeature];
 
         {/* Content Area */}
         <div className="relative top-10 z-10 bg-[var(--header-color)] p-6 md:p-10 w-full md:ml-[25%] md:w-[75%] rounded-[20px] min-h-[350px]">
-            <h4 className="text-xl font-semibold text-[var(--text-dark)] mb-2">
-            {currentData.title}
-            </h4>
-            <p className="text-[var(--text-muted)] text-sm mb-6">{currentData.description}</p>
+  <h3 className="text-xl font-semibold text-[var(--primary-color)] mb-2">
+    {currentData.title}
+  </h3>
+  <p className="text-[var(--text-muted)] text-sm mb-6">
+    {currentData.description}
+  </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {currentData.features.map((feat, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                <feat.icon className="w-6 h-6 text-[var(--primary-color)]" />
-                <div>
-                    <p className="font-medium text-[var(--text-dark)]">{feat.title}</p>
-                    <p className="text-sm text-[var(--text-muted)]">{feat.desc}</p>
-                </div>
-                </div>
-            ))}
-            </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {currentData.features.map((feat, index) => (
+      <div key={index} className="flex items-start space-x-3">
+        <div className="w-10 h-10 flex items-center justify-center shrink-0">
+          <feat.icon className="w-6 h-6 text-[var(--primary-color)]" />
         </div>
+        <div>
+          <p className="text-[var(--text-dark)]">
+            <strong className="font-medium text-[var(--primary-color)]">
+              {feat.title}
+            </strong>{" "}
+            - {feat.desc}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
     </div>
   );
