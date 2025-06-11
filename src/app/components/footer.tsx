@@ -27,13 +27,13 @@ const Footer = () => {
           
           <div className="">
             <p className="" style={{color:'white' }}>Subscribe to our new letters</p>
-            <div className="flex">
+            <div className="flex gap-2 mt-2">
               <input
                 type="email"
                 placeholder="Your email address"
-                className="rounded-l-md px-5 py-3 w-full text-black bg-white"
+                className="rounded-md px-5 py-3 w-full text-black bg-white"
               />
-              <button className="bg-[var(--primary-400)] hover:bg-white hover:text-[var(--primary-color)] px-4 rounded-r-md transition">
+              <button className="bg-[var(--primary-400)] hover:bg-white hover:text-[var(--primary-color)] px-4 rounded-md transition border border-white">
                 Subscribe
               </button>
             </div>

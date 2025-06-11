@@ -7,8 +7,13 @@ import {
   Bars3Icon,
   HomeIcon,
   ChevronRightIcon,
-  ArrowDownRightIcon
-} from '@heroicons/react/24/outline';
+  ArrowDownRightIcon,
+  ScaleIcon,
+  DocumentTextIcon
+} from '@heroicons/react/20/solid';
+
+       
+
 import { useAuth } from '../context/authContext';
 
 import { usePathname } from 'next/navigation';
@@ -122,25 +127,54 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
           <ArrowDownRightIcon className="h-4 w-4 " />
         </button>
 
-        {isHrDropdownOpen && (
-         <div className="md:absolute static flex flex-col p-4 w-full md:min-w-[200px] h-fit gap-2 bg-[var(--header-color)] mt-2 md:mt-4 z-50 text-sm">
-  <Link
-    href="/ourHrServices"
-    className={linkClass('/ourHrServices')}
-    onClick={closeMenu}
-  >
-    HR and Employment Law Advisory
-  </Link>
-  <Link
-    href="/ourHrServices/hRDocumentsContracts"
-    className={linkClass('/ourHrServices/hRDocumentsContracts')}
-    onClick={closeMenu}
-  >
-    HR Documents & Contracts
-  </Link>
-</div>
-        )}
-      </div>
+
+{isHrDropdownOpen && (
+  <div className="relative">
+    {/* Triangle Arrow */}
+    <div className="absolute top-[25px] left-1/2 transform -translate-x-1/2 w-3 h-3 
+                    border-l-40 border-r-40 border-b-40 border-transparent 
+                    border-b-white z-50" />
+
+    {/* Dropdown Panel */}
+    <div className="md:absolute md:left-[-110px] flex flex-col p-4 w-full md:min-w-[370px] h-fit gap-2 bg-white mt-2 md:mt-16 z-50 rounded-md shadow-lg">
+      <p className="text-[var(--primary-color)] font-semibold">Our HR Services</p>
+
+      {/* HR and Employment Law Advisory */}
+      <Link
+        href="/ourHrServices"
+        className="flex items-start gap-3 p-3 rounded-md bg-[var(--primary-100)] hover:bg-[var(--primary-200)] transition"
+        onClick={closeMenu}
+      >
+        <div>
+          <span className="flex gap-2 font-bold text-md text-[var(--text-dark)]">
+            <ScaleIcon className="h-6 w-6 text-[var(--primary-color)]" />
+            HR and Employment Law Advisory
+          </span>
+          <span className="text-gray-500 text-sm leading-none">
+            Manage staff documents, shifts, and attendance
+          </span>
+        </div>
+      </Link>
+
+      {/* HR Documents & Contracts */}
+      <Link
+        href="/ourHrServices/hRDocumentsContracts"
+        className="flex items-start gap-3 p-3 rounded-md bg-[var(--primary-100)] hover:bg-[var(--primary-200)] transition"
+        onClick={closeMenu}
+      >
+        <div>
+          <span className="flex gap-2 font-bold text-md text-[var(--text-dark)]">
+            <DocumentTextIcon className="h-6 w-6 text-[var(--primary-color)] ml-1" />
+            HR Documents & Contracts
+          </span>
+          <span className="text-gray-500 text-sm leading-none">
+            Manage staff documents, contracts electronically
+          </span>
+        </div>
+      </Link>
+    </div>
+  </div>
+)}      </div>
 
       <Link
         href="/ourHrExperties"

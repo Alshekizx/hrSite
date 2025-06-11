@@ -239,31 +239,31 @@ const currentData = featureData[selectedFeature];
 
         {/* Content Area */}
         <div className="relative top-10 z-10 bg-[var(--header-color)] p-6 md:p-10 w-full md:ml-[25%] md:w-[75%] rounded-[20px] min-h-[350px]">
-  <h3 className="text-xl font-semibold text-[var(--primary-color)] mb-2">
-    {currentData.title}
-  </h3>
-  <p className="text-[var(--text-muted)] text-sm mb-6">
-    {currentData.description}
-  </p>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    {currentData.features.map((feat, index) => (
-      <div key={index} className="flex items-start space-x-3">
-        <div className="w-10 h-10 flex items-center justify-center shrink-0">
-          <feat.icon className="w-6 h-6 text-[var(--primary-color)]" />
-        </div>
-        <div>
-          <p className="text-[var(--text-dark)]">
-            <strong className="font-medium text-[var(--primary-color)]">
-              {feat.title}
-            </strong>{" "}
-            - {feat.desc}
+          <h3 className="text-xl font-semibold text-[var(--primary-color)] mb-2">
+            {currentData.title}
+          </h3>
+          <p className="text-[var(--text-muted)] text-sm mb-6">
+            {currentData.description}
           </p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {currentData.features.map((feat, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="w-10 h-10 flex items-center justify-center shrink-0">
+                    <feat.icon className="w-6 h-6 text-[var(--primary-color)]" />
+                  </div>
+                  <div>
+                    <p className="text-[var(--text-dark)]">
+                      <strong className="font-medium text-[var(--primary-color)]">
+                        {feat.title}
+                      </strong>{" "}
+                      - {feat.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
       </div>
     </div>
