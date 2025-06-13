@@ -1,5 +1,12 @@
+// Type for featureDetails
+type FeatureDetails = {
+  hrSoftware: { [feature: string]: string };
+  hrSupport: { [feature: string]: string };
+  hrSoftwareSupport: { [feature: string]: string };
+};
+
 // Feature Descriptions
-export const featureDetails = {
+export const featureDetails: FeatureDetails = {
   hrSoftware: {
     "Document Storage": "Securely store and manage employee-related documents in a centralized location.",
     "Employee Management": "Handle employee profiles, roles, departments, and lifecycle tracking.",

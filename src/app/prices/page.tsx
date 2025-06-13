@@ -2,12 +2,13 @@
 
 import { JSX, useState } from "react";
 import HeroSection from "../components/ourHrServiceComponent/heroSection";
-import { pricingPlans, PricingPlan } from "./priceData";
-import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/solid";
+import { pricingPlans, PricingPlan, featureDetails } from "./priceData";
+import { CheckCircleIcon, XCircleIcon,InformationCircleIcon } from "@heroicons/react/24/solid";
+import React from "react";
 
 const getIcon = (enabled: boolean) => {
   return enabled ? (
-    <CheckCircleIcon className="h-5 w-5 text-green-500 mx-auto" />
+    <CheckCircleIcon className="h-5 w-5 text-[var(--secondary-color)] mx-auto" />
   ) : (
     <XCircleIcon className="hidden h-5 w-5 text-red-400 mx-auto" />
   );
@@ -28,6 +29,8 @@ const getFeatureStatus = (
 
 const PricesPage = () => {
   const [expandedPlans, setExpandedPlans] = useState<Record<number, boolean>>({});
+  const [openDropdownFeature, setOpenDropdownFeature] = useState<string | null>(null);
+  
    const toggleExpand = (index: number) => {
     setExpandedPlans((prev) => ({
       ...prev,
@@ -178,18 +181,9 @@ const PricesPage = () => {
   </div>
 
   <div className="overflow-x-auto">
-    <table className="min-w-full border-collapse border border-gray-200 text-sm">
-      <thead>
-        <tr className="bg-gray-100 text-[var(--primary-color)] text-center">
-          <th className="p-3 w-1/4 text-left">HR Software</th>
-          <th className="p-3 w-1/4">CORE</th>
-          <th className="p-3 w-1/4">ESSENTIALS</th>
-          <th className="p-3 w-1/4">ADVANCED</th>
-        </tr>
-      </thead>
-      <tbody className="text-center text-gray-700">
-        {[
-          "Document Storage",
+        <FeatureTable
+      sectionTitle="HR Software"
+      features={["Document Storage",
           "Employee Management",
           "Geo-Fence Clock-In",
           "Employee SelfService",
@@ -201,61 +195,34 @@ const PricesPage = () => {
           "Shift Scheduling",
           "Leave Management",
           "Attendance Management",
-          "Holiday Scheduling",
-        ].map((feature, idx) => (
-          <tr key={idx} className="border-t border-gray-200">
-            <td className="text-left p-3">{feature}</td>
-            <td>{getIcon(getFeatureStatus("CORE", "hrSoftware", feature))}</td>
-            <td>{getIcon(getFeatureStatus("ESSENTIALS", "hrSoftware", feature))}</td>
-            <td>{getIcon(getFeatureStatus("ADVANCED", "hrSoftware", feature))}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-    <table className="min-w-full border-collapse border border-gray-200 text-sm">
-      <thead>
-        <tr className="bg-gray-100 text-[var(--primary-color)] text-center">
-          <th className="p-3 w-1/4 text-left">HR Support</th>
-          <th className="p-3 w-1/4">CORE</th>
-          <th className="p-3 w-1/4">ESSENTIALS</th>
-          <th className="p-3 w-1/4">ADVANCED</th>
-        </tr>
-      </thead>
-      <tbody className="text-center text-gray-700">
-        {[
-          "HR Support Tickets",
-        "Employment LawAdvice",
-        "Digital Hr Documents",
-        "HR Audits",
-        "HR Documentation Support",
-        "HR Policy Development",
-        "Unlimited Digital Contracts",
-        "Periodic Documentation Review",
-        "Document Storage",
-        "Updating Docs On Law Changes",
-        "E-Signatures",
-        ].map((feature, idx) => (
-          <tr key={idx} className="border-t border-gray-200">
-            <td className="text-left p-3">{feature}</td>
-            <td>{getIcon(getFeatureStatus("CORE", "hrSupport", feature))}</td>
-            <td>{getIcon(getFeatureStatus("ESSENTIALS", "hrSupport", feature))}</td>
-            <td>{getIcon(getFeatureStatus("ADVANCED", "hrSupport", feature))}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-    <table className="min-w-full border-collapse border border-gray-200 text-sm">
-      <thead>
-        <tr className="bg-gray-100 text-[var(--primary-color)] text-center">
-          <th className="p-3 w-1/4 text-left">HR Software & HR Support</th>
-          <th className="p-3 w-1/4">CORE</th>
-          <th className="p-3 w-1/4">ESSENTIALS</th>
-          <th className="p-3 w-1/4">ADVANCED</th>
-        </tr>
-      </thead>
-      <tbody className="text-center text-gray-700">
-        {[
-         "Employee Relations Support",
+          "Holiday Scheduling"]}
+      sectionKey="hrSoftware"
+      openDropdownFeature={openDropdownFeature}
+  setOpenDropdownFeature={setOpenDropdownFeature}
+    />
+
+    <FeatureTable
+      sectionTitle="HR Support"
+      features={["HR Support Tickets",
+                    "Employment LawAdvice",
+                    "Digital Hr Documents",
+                    "HR Audits",
+                    "HR Documentation Support",
+                    "HR Policy Development",
+                    "Unlimited Digital Contracts",
+                    "Periodic Documentation Review",
+                    "Document Storage",
+                    "Updating Docs On Law Changes",
+                    "E-Signatures"]}
+                  sectionKey="hrSupport"
+                  openDropdownFeature={openDropdownFeature}
+              setOpenDropdownFeature={setOpenDropdownFeature}
+    />
+
+     <FeatureTable
+      sectionTitle="HR Software & HR Support"
+      features={[
+        "Employee Relations Support",
         "Labour Inspections Support",
         "Job Analysis Description",
         "Final Stage Interviewing",
@@ -263,17 +230,12 @@ const PricesPage = () => {
         "Offer Management",
         "Onboarding Coordination",
         "All CoreFeatures",
-        "All Essential Features",
-        ].map((feature, idx) => (
-          <tr key={idx} className="border-t border-gray-200">
-          <td className="text-left p-3">{feature}</td>
-          <td>{getIcon(getFeatureStatus("CORE", "hrSoftwareSupport", feature))}</td>
-          <td>{getIcon(getFeatureStatus("ESSENTIALS", "hrSoftwareSupport", feature))}</td>
-          <td>{getIcon(getFeatureStatus("ADVANCED", "hrSoftwareSupport", feature))}</td>
-        </tr>
-        ))}
-      </tbody>
-    </table>
+        "All Essential Features",]}
+      sectionKey="hrSoftwareSupport"
+      openDropdownFeature={openDropdownFeature}
+  setOpenDropdownFeature={setOpenDropdownFeature}
+    />
+   
   </div>
 </div>
 
@@ -283,3 +245,69 @@ const PricesPage = () => {
 };
 
 export default PricesPage;
+
+interface FeatureTableProps {
+  sectionTitle: string;
+  features: string[];
+  sectionKey: keyof PricingPlan["features"];
+  openDropdownFeature: string | null;
+  setOpenDropdownFeature: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const FeatureTable: React.FC<FeatureTableProps> = ({
+  sectionTitle,
+  features,
+  sectionKey,
+  openDropdownFeature,
+  setOpenDropdownFeature,
+}) => (
+  <table className="min-w-full border-collapse border border-gray-200 text-sm">
+    <thead>
+      <tr className="bg-gray-100 text-[var(--primary-color)] text-center">
+        <th className="p-3 w-1/4 text-left">{sectionTitle}</th>
+        <th></th>
+        <th className="p-3 w-1/4">CORE</th>
+        <th className="p-3 w-1/4">ESSENTIALS</th>
+        <th className="p-3 w-1/4">ADVANCED</th>
+      </tr>
+    </thead>
+    <tbody className="text-center text-gray-700">
+      {features.map((feature, idx) => (
+        <React.Fragment key={idx}>
+          <tr className="border-t border-gray-200">
+            <td className="text-left p-3">{feature}</td>
+            <td>
+              <button
+                onClick={() =>
+                  setOpenDropdownFeature(prev =>
+                    prev === feature ? null : feature
+                  )
+                }
+              >
+                <InformationCircleIcon className="h-5 w-5 text-[var(--secondary-color)]" />
+              </button>
+            </td>
+            <td>{getIcon(getFeatureStatus("CORE", sectionKey, feature))}</td>
+            <td>{getIcon(getFeatureStatus("ESSENTIALS", sectionKey, feature))}</td>
+            <td>{getIcon(getFeatureStatus("ADVANCED", sectionKey, feature))}</td>
+          </tr>
+          {openDropdownFeature === feature && (
+            <tr>
+              <td
+                colSpan={5}
+                className="bg-gray-50 p-3 text-left text-sm text-gray-700 border-t border-b border-gray-200"
+              >
+                <span className="block">
+                 {featureDetails[sectionKey]?.[feature] || "No details available."}
+                </span>
+              </td>
+            </tr>
+          )}
+        </React.Fragment>
+      ))}
+    </tbody>
+  </table>
+);
+
+
+
