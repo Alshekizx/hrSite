@@ -22,10 +22,9 @@ const handleSignup = (e: React.FormEvent) => {
   
 
   return (
-    <main className="min-h-screen pt-16 grid grid-cols-1 pt-10 md:grid-cols-2">
+    <main className="min-h-screen grid grid-cols-1 pt-16 lg:grid-cols-2">
       {/* Left side */}
-      <div className="relative bg-[var(--primary-color)] flex items-center justify-center p-6 card-texture-bg2"
-     
+      <div className="hidden  relative bg-[var(--primary-color)] lg:flex items-center justify-center p-6 card-texture-bg2"
       >
         <Link href="/" className="absolute top-6 left-6">
           <HomeIcon className="h-10 w-10 text-white" />

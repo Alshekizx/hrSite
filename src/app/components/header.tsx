@@ -10,7 +10,7 @@ import {
   ArrowDownRightIcon,
   ScaleIcon,
   DocumentTextIcon
-} from '@heroicons/react/20/solid';
+} from '@heroicons/react/24/outline';
 
        
 
@@ -174,7 +174,12 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       </Link>
     </div>
   </div>
-)}      </div>
+
+  
+)}      
+
+
+</div>
 
       <Link
         href="/ourHrExperties"
@@ -197,6 +202,9 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       >
         Blog
       </Link>
+      <div className="lg:hidden md:hidden sm:flex text-[var(--text-muted)] text-lg">
+    <UserIcon />
+  </div>
     </>
   );
 };
@@ -207,9 +215,11 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       <div className="px-4 py-4 flex justify-between items-center">
         {/* Logo and Icons */}
         <div className="flex items-center space-x-1">
+          <div className='hidden md:flex flex-row gap-1 items-center'>
           <HomeIcon className="h-8 w-8 text-[var(--primary-color)]" />
-          <ChevronRightIcon className="h-6 w-6 mr-4 text-[var(--text-muted)]" />
-          <Link href="/" className="flex items-center space-x-2">
+          <ChevronRightIcon className="h-8 w-8  text-[var(--text-muted)]" />
+         </div>
+           <Link href="/" className="flex items-center ">
             <Image
               src="/logos/MployusHRLogo.png"
               alt="Logo"
@@ -222,9 +232,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
         {/* User Icon & Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
-          <div className="lg:hidden md:hidden sm:flex text-[var(--text-muted)] text-lg">
-            <UserIcon />
-          </div>
+          
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-[var(--text-muted)]"
