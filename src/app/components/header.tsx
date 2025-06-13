@@ -131,12 +131,12 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 {isHrDropdownOpen && (
   <div className="relative">
     {/* Triangle Arrow */}
-    <div className="absolute top-[25px] left-1/2 transform -translate-x-1/2 w-3 h-3 
+    <div className="absolute top-[26px] left-1/2 transform -translate-x-1/2 w-3 h-3 
                     border-l-40 border-r-40 border-b-40 border-transparent 
                     border-b-white z-50" />
 
     {/* Dropdown Panel */}
-    <div className="md:absolute md:left-[-110px] flex flex-col p-4 w-full md:min-w-[370px] h-fit gap-2 bg-white mt-2 md:mt-16 z-50 rounded-md shadow-lg">
+    <div className="md:absolute md:left-[-110px] flex flex-col p-4 w-full md:min-w-[370px] h-fit gap-2 bg-white mt-2 md:mt-16 z-50 shadow-lg">
       <p className="text-[var(--primary-color)] font-semibold">Our HR Services</p>
 
       {/* HR and Employment Law Advisory */}

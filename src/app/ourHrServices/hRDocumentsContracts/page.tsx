@@ -3,11 +3,12 @@
 
 import HrServicesGrid from "@/app/components/homepage/tailoredHiringSolutions";
 
-import HrSection2 from "@/app/components/ourHrServiceComponent/hrSolution2";
+
 import HeroSection from "@/app/components/ourHrServiceComponent/heroSection";
-import ContactForm2 from "@/app/components/ourHrServiceComponent/contactUs2";
 import AnotherHrSection from "@/app/components/ourHrServiceComponent/anotherHrSolution";
 import AnotherHrSectionInverse from "@/app/components/ourHrServiceComponent/anotherInverseHrSolution";
+import HrSection3 from "@/app/components/ourHrServiceComponent/hrsolution3";
+import Image from "next/image";
 
 const serviceData = {
   headline: 'HR Contracts & Handbooks',
@@ -44,9 +45,9 @@ const serviceData = {
 const hrData = {
   title: 'New Starter Employment Documents',
   description:
-    'Starting a new hire on the right foot requires clear, legally sound documentation. Our expertly crafted HR documents ensure compliance, protect your business, and provide clarity for both employers and employees. From contracts to policies, we streamline the process, saving you time and reducing legal risks.',
+    'Starting a new hire on the right foot requires clear, legally sound documentation. Our expertly crafted HR documents ensure compliance, protect your business, and provide clarity for both employers and employees. \n\n From contracts to policies, we streamline the process, saving you time and reducing legal risks.',
  
-  image: '/images/wmremove-transformed5.png', // ensure it's in /public
+  image: '/images/wmremove-transformed51.png', // ensure it's in /public
 };
 
 const hrData2 = {
@@ -67,7 +68,7 @@ const hrData2 = {
       description: 'Ongoing assessments to ensure all contracts, policies, and handbooks remain legally sound.',
     },
   ],
-  image: '/images/wmremove-transformed6.png', // ensure it's in /public
+  image: '/images/wmremove-transformed61.png', // ensure it's in /public
 };
 
 const hrData4 = {
@@ -140,11 +141,11 @@ export default function OurHrServices2() {
      
 
       <HrServicesGrid {...serviceData} />
-      <div className="bg-[var(--primary-100)] py-10">
+      <div className="bg-[var(--header-color)] py-10">
       <AnotherHrSection {...hrData}/>
       </div>
       <AnotherHrSectionInverse {...hrData2}/>
-      <HrSection2 {...hrData4} />
+      <HrSection3 {...hrData4} />
       <div  className="flex flex-col items-center gap-6  ">
          <div className="text-center w-full max-w-[800px] ">
           <h3 className="text-[var(--primary-color)] text-2xl font-bold">How Our Service Benefits You</h3>
@@ -154,9 +155,22 @@ export default function OurHrServices2() {
       </div>
         <AnotherHrSectionInverse {...hrData5}/>
       </div>
-      <ContactForm2/>
+       <div className="relative px-10 py-16 text-center flex flex-col gap-4 justify-center items-center w-full bg-[var(--header-color)] ">
+        <Image
+              src='/images/bgtrans.png'
+              alt='bg'
+              width={200}
+              height={200}
+              className="absolute top-0 left-0 w-1/2 h-full"/>
+        
+          <h3 className="text-[var(--primary-color)] text-2xl font-bold">Ready to Get Started?</h3>
+          <p className="text-[var(--primary-color)] font-bold max-w-[800px]">
+           Select the plan that best fits your team’s needs and take the next step by requesting a free demo to experience how it works in real time.
+          </p>
+          <button className="button2" style={{borderRadius:'5px'}}>View Plans & Request Demo</button>
+      </div>
 
-      {""}
+    
     
     </div>
   );

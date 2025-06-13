@@ -17,7 +17,7 @@ export default function AnotherHrSection({
   reverse = false,
 }: HrSectionProps) {
   const textRef = useRef<HTMLDivElement>(null);
-  const [, setTextHeight] = useState<number | undefined>(undefined);
+  const [textHeight, setTextHeight] = useState<number | undefined>(undefined);
 
   useEffect(() => {
     if (textRef.current) {
@@ -27,7 +27,7 @@ export default function AnotherHrSection({
 
   return (
     <section
-      className="containerDiv  w-full"
+      className="containerDiv bg-[var(--background-light)] w-full"
       style={{ padding: '0 auto', minHeight: '50px' }}
     >
       <div
@@ -38,7 +38,7 @@ export default function AnotherHrSection({
         {/* Text Content */}
         <div
           ref={textRef}
-          className="flex flex-col gap-6 text-center lg:text-left lg:w-3/5"
+          className="flex flex-col gap-6 text-center lg:text-left lg:w-2/3"
         >
           {title && (
             <h3 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
@@ -54,15 +54,15 @@ export default function AnotherHrSection({
 
          {/* Image Content */}
         <div
-          className="relative w-full lg:w-2/5 rounded-lg  flex items-center justify-center"
-          
+          className="w-full lg:w-1/3 rounded-lg overflow-hidden flex items-center justify-center"
+          style={{ height: textHeight ? `${textHeight}px` : 'auto' }}
         >
           <Image
             src={image}
             alt={title ?? 'Section image'}
-            width={400}
-            height={400}
-            className="object-contain w-full  h-full"
+            width={600}
+            height={textHeight ?? 600}
+            className="object-contain"
           />
         </div>
       </div>

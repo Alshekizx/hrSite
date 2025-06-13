@@ -14,7 +14,7 @@ const ContactUs = () => {
   const maxChars = 1000;
 
   return (
-    <section className="w-full bg-[var(--background)] pt-10 pb-24 overflow-hidden">
+    <section className="w-full  pt-10 pb-24 overflow-hidden">
 
        <HeroSection
                    title="Contact Us"
@@ -100,30 +100,30 @@ const ContactUs = () => {
       </div>
 
       {/* ---------- FORM ---------- */}
-      <div className="max-w-6xl mx-auto mt-20 px-4">
+      <div className="max-w-6xl flex flex-col items-center mx-auto mt-20 px-4">
         <h3 className="text-center mb-2" >
           Get&nbsp;In&nbsp; <span style={{ color: 'var(--color-primary)' }}>Touch</span> 
         </h3>
-        <p className="text-center text-text-muted mb-10">
-          Have questions or want to make a request? We’re here to help!
+        <p className="text-center text-text-muted max-w-[700px] mb-10">
+          Have questions or want to make a request? We are here to help! Fill out the form below or email us directly.
         </p>
 
-        <form className="space-y-6">
+        <form className="space-y-6 w-full">
           <div className="grid md:grid-cols-1 gap-6">
             <div>
               <label className="block text-sm mb-1">Name</label>
               <input
                 type="text"
-                placeholder="Your name"
-                className="w-full bg-white border border-[var(--color-border)] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+                
+                className="bg-[var(--secondary-100)] w-full border border-[var(--color-border)] rounded-md px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               />
             </div>
             <div>
               <label className="block text-sm mb-1">Email</label>
               <input
                 type="email"
-                placeholder="you@example.com"
-                className="w-full bg-white border border-[var(--color-border)] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+              
+                className="bg-[var(--secondary-100)] w-full border border-[var(--color-border)] rounded-md px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               />
             </div>
           </div>
@@ -135,8 +135,8 @@ const ContactUs = () => {
               value={message}
               maxLength={maxChars}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Type your message"
-              className="w-full bg-white border border-[var(--color-border)] rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] resize-none"
+            
+              className="bg-[var(--secondary-100)] w-full border border-[var(--color-border)] rounded-md px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] resize-none"
             />
             <div className="text-right text-xs text-text-muted mt-1">
               {message.length}/{maxChars}

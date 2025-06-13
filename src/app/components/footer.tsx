@@ -33,7 +33,7 @@ const Footer = () => {
                 placeholder="Your email address"
                 className="rounded-md px-5 py-3 w-full text-black bg-white"
               />
-              <button className="bg-[var(--primary-400)] hover:bg-white hover:text-[var(--primary-color)] px-4 rounded-md transition border border-white">
+              <button className="button2 border border-white">
                 Subscribe
               </button>
             </div>

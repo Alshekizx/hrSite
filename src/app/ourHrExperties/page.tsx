@@ -1,8 +1,7 @@
 'use client';
-import Image from "next/image";
-import AnotherHrSection from "../components/ourHrServiceComponent/anotherHrSolution";
 import HeroSection from "../components/ourHrServiceComponent/heroSection";
-
+import AnotherHrSection2 from "../components/ourHrServiceComponent/anotherHrSolution2";
+import ContactForm2 from "../components/ourHrServiceComponent/contactUs2";
 export default function OurHrExperties() {
  
 const hrData = {
@@ -94,7 +93,8 @@ const hrData = {
   };
 
   return (
-    <div className="pt-10 flex flex-col w-full gap-20 ">
+    <div>
+      <div className="pt-10 flex flex-col items-center w-full gap-10 ">
     <HeroSection
       title="Our HR Expertise"
       description="At MployUs, we deliver practical, compliant HR solutions tailored to Irish employment law. From auto-enrolment pensions to TUPE transfers, we support businesses through every stage of the employee lifecycle."
@@ -105,81 +105,32 @@ const hrData = {
       ]}
     />
 
-    <AnotherHrSection {...hrData} />
-    <AnotherHrSection {...hrData2} />
-    <AnotherHrSection {...hrData3} />
-    <AnotherHrSection {...hrData4} />
-    <AnotherHrSection {...hrData5} />
-    <AnotherHrSection {...hrData6} />
-    <AnotherHrSection {...hrData7} />
-    <AnotherHrSection {...hrData8} />
-    <AnotherHrSection {...hrData9} />
-    <AnotherHrSection {...hrData10} />
-    <AnotherHrSection {...hrData11} />
+    
+    <AnotherHrSection2 {...hrData} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData2} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData3} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData4} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData5} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData6} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData7} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData8} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData9} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData10} />
+    <hr  className="border border-[var(--secondary-100)] w-full max-w-[90%]"/>
+    <AnotherHrSection2 {...hrData11} />
 
-    <div className="containerDiv ">
-<div className="rounded-lg bg-[var(--primary-100)] flex flex-col items-center p-10">
-      <div className="text-center w-full max-w-[700px] ">
-          <h3 className="text-[var(--primary-color)] text-2xl font-bold">Contact Us</h3>
-          <p className="text-base">
-            Feel free to use the form or drop us an email. Phone calls also work too.
-          </p>
-          
-      </div>
-<div className="flex justify-center gap-6 flex-wrap lg:flex-nowrap">
-  {/* Image Section */}
-  <div className="hidden lg:flex w-full lg:w-1/2 justify-center items-center p-10 relative overflow-hidden min-h-[100px]">
-    <Image
-      src="/images/contactFormImg2.png"
-      alt="Contact Form Illustration"
-      width={500}
-      height={500}
-      className="object-contain"
-      priority
-    />
-  </div>
-
-  {/* Form Section */}
-  <div className="w-full lg:w-1/2 flex items-center ">
-    <form className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 w-full">
-      <div>
-        <label className="block mb-2 font-medium text-[var(--text-dark)]">First Name</label>
-        <input
-          type="text"
-          placeholder="John"
-          className="w-full p-4 border border-[var(--border-color)] custom-ring-color"
-        />
-      </div>
-
-      <div>
-        <label className="block mb-2 font-medium text-[var(--text-dark)]">Email Address</label>
-        <input
-          type="email"
-          placeholder="email@example.com"
-          className="w-full p-4 border border-[var(--border-color)] custom-ring-color"
-        />
-      </div>
-
-    <div className="md:col-span-2">
-    <label className="block mb-2 font-medium text-[var(--text-dark)]">Message</label>
-    <textarea
-        placeholder="Type your message"
-        rows={6}
-        className="w-full p-4 border border-[var(--border-color)] custom-ring-color resize-none"
-    ></textarea>
     </div>
-
-      <div className="md:col-span-2">
-        <button type="submit" className="w-full button py-3" style={{ borderRadius: "5px", padding: '15px' }}>
-          Book Free Consultation
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-</div>
-    </div>
-      
+    <div className="pt-10"> <ContactForm2/></div>
+   
     </div>
   );
 }

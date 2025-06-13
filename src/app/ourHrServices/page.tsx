@@ -5,7 +5,7 @@ import HrServicesGrid from "../components/homepage/tailoredHiringSolutions";
 import HrSectionInverse from "../components/ourHrServiceComponent/hrSolutionInvrese";
 import HrSection2 from "../components/ourHrServiceComponent/hrSolution2";
 import HeroSection from "../components/ourHrServiceComponent/heroSection";
-import ContactForm2 from "../components/ourHrServiceComponent/contactUs2";
+import Image from "next/image";
 
 const serviceData = {
   headline: 'Comprehensive HR Support for Your Business',
@@ -45,40 +45,40 @@ const hrData = {
     'Hiring a full-time senior HR professional can cost over €45,000 per year. With our HR services, you receive top-tier support at a fraction of the cost.',
   features: [
     {
-      title: 'Save Time & Reduce Risk',
-      description: 'We help you make the right staff decisions while ensuring compliance.',
+      title: 'Save Time, Cost & Reduce Risk ',
+      description: ' We help you make the right staff decisions while ensuring compliance.and managing costs',
     },
     {
-      title: 'Lower Costs',
-      description: 'Avoid the expense of a full-time HR manager while getting expert guidance.',
+      title: 'Immediate Expert Support',
+      description: 'Avoid the expense of a full-time HR manager while getting expert guidance. Speak with employment law specialists anytime.',
     },
     {
       title: 'Proactive Support',
-      description: 'Identify and prevent potential HR challenges before they escalate.',
+      description: ' Avoid costly employee claims and legal disputes.',
     },
   ],
   image: '/images/wmremove-transformed1.png', // ensure it's in /public
 };
 
 const hrData2 = {
-  title: 'Expert Employment Law Support for Small Businesses',
+  title: 'Industrial Relations & Employment Law Support for Small Businesses',
   description:
-    'Stay Compliant with Ease navigating Irish employment law can be challenging, especially for small businesses without dedicated HR teams. Mployus HR provides expert guidance to ensure compliance and protect your business.',
+    'We provide expert guidance to help small businesses manage workplace issues confidently and compliantly. From conflict resolution to disciplinary procedures, we act as your HR partner—ensuring smooth employee relations while protecting your business.',
   features: [
     {
-      title: 'Employment Law Updates',
-      description: 'Stay informed on the latest legal changes and their impact.',
+      title: 'Grievance & Disciplinary Guidance',
+      description: 'Clear, practical advice on handling employee complaints, misconduct, and disciplinary issues.',
     },
     {
-      title: 'WRC Audit Preparation',
-      description: 'Get expert support to prepare for Workplace Relations Commission (WRC) audits.',
+      title: 'Policy & Process Support ',
+      description: 'Assistance with drafting and implementing fair, legally compliant procedures.',
     },
     {
-      title: 'Unlimited Expertise Advice',
-      description: 'Receive tailored guidance on contracts, dismissals, and compliance.',
+      title: 'Compliance & Risk Reduction',
+      description: 'Expert support to help you avoid legal pitfalls and ensure fair treatment for all employees.',
     },
   ],
-  image: '/images/wmremove-transformed2.png', // ensure it's in /public
+  image: '/images/wmremove-transformed21.png', // ensure it's in /public
 };
 
 const hrData4 = {
@@ -111,24 +111,24 @@ const hrData4 = {
 };
 
 const hrData3 = {
-  title: 'Specialised Employment Law Assistance',
+  title: 'WRC & Workplace Compliance Support',
   description:
-    'Our dedicated helpline ensures you have access to qualified professionals whenever you need support.',
+    'Get expert help to stay compliant with Irish labour laws—right from your phone. We support small businesses with WRC inspections, complex workplace matters, and real-time advice.',
   features: [
     {
-      title: 'Immediate Expert Support ',
-      description: 'Speak with employment law specialists anytime.',
+      title: 'Contract Breach Support ',
+      description: ' Unsure about a possible contract breach? We provide clear, confidential advice.',
     },
     {
-      title: 'Risk Protection',
-      description: 'Avoid costly employee claims and legal disputes.',
+      title: 'Inspection Ready ',
+      description: ' Full support to prepare for WRC audits, including mock checks and documentation.',
     },
     {
-      title: 'Clear, Actionable Advice',
-      description: 'Practical solutions tailored to your business needs.',
+      title: 'Contract & HR Clarity',
+      description: 'Clear advice on HR compliance, contract issues, and employment rights.',
     },
   ],
-  image: '/images/wmremove-transformed4.png', // ensure it's in /public
+  image: '/images/wmremove-transformed41.png', // ensure it's in /public
 };
 
 
@@ -151,21 +151,37 @@ export default function OurHrServices1() {
      
 
       <HrServicesGrid {...serviceData} />
-      <HrSection {...hrData} />
-      <HrSectionInverse {...hrData2} />
+      
+      <HrSectionInverse {...hrData} />
+      <HrSection {...hrData2} />
+
+      <HrSectionInverse {...hrData3} />
 
       <div className="flex flex-col items-center gap-6  ">
          <div className="text-center w-full max-w-[800px] ">
           <h3 className="text-[var(--primary-color)] text-2xl font-bold">Why Choose Mployus HR?</h3>
-          <p className="text-base">
+          <p className="text-[var(--text-muted)]">
             We provide proactive, tailored HR solutions to keep your business compliant and efficient. Our team stays ahead of Irish employment law changes, offering continuous support to navigate complex HR challenges.
           </p>
       </div>
       <HrSection2 {...hrData4} />
       </div>
-      <HrSectionInverse {...hrData3} />
+      
 
-      <ContactForm2/>
+     <div className="relative px-10 py-16 text-center flex flex-col gap-4 justify-center items-center w-full bg-[var(--header-color)] ">
+             <Image
+                   src='/images/bgtrans.png'
+                   alt='bg'
+                   width={200}
+                   height={200}
+                   className="absolute top-0 left-0 w-1/2 h-full"/>
+             
+               <h3 className="text-[var(--primary-color)] text-2xl font-bold">Ready to Get Started?</h3>
+               <p className="text-[var(--primary-color)] font-bold max-w-[800px]">
+                Select the plan that best fits your team’s needs and take the next step by requesting a free demo to experience how it works in real time.
+               </p>
+               <button className="button2" style={{borderRadius:'5px'}}>View Plans & Request Demo</button>
+           </div>
     
     </div>
   );

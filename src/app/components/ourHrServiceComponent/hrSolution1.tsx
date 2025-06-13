@@ -59,13 +59,13 @@ export default function HrSection({
           </ul>
         </div>
 
-        <div style={{ height }} className="rounded-lg h-full overflow-hidden">
+        <div style={{ height }} className="rounded-lg h-full ">
           <Image
             src={image}
             alt={title ?? 'section image'}
             width={600}
             height={600}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>
