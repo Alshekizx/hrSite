@@ -2,68 +2,12 @@
 import { useRef, useState } from "react";
 import { ArrowRightIcon, ArrowLeftIcon} from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { services } from "@/app/industries/sectorData";
 
 export default function SectorsWeCover() {
   const cardWidth = 350;
   const scrollRef = useRef<HTMLDivElement>(null);
-  const services = [
-    {
-      title: "Retail",
-      details:
-        "We help retail businesses with compliant contracts, shift scheduling, and employee concerns.",
-      bgImage: "/images/retail.jpg",
-      link: "/sectors/retail",
-    },
-    {
-      title: "Professional Services",
-      details:
-        "We help professional service businesses with HR strategy, recruitment, and legal compliance.",
-      bgImage: "/images/hospitality.jpg",
-      link: "/sectors/professional-services",
-    },
-    {
-      title: "Tech Startups & SMEs",
-      details:
-        "We support tech startups with agile HR practices and recruitment tailored for fast growth.",
-      bgImage: "/images/healthcare.jpg",
-      link: "/sectors/tech-startups",
-    },
-    {
-      title: "Education",
-      details:
-        "We provide comprehensive HR services for the education sector, including recruitment and staff development.",
-      bgImage: "/images/education.jpg",
-      link: "/sectors/education",
-    },
-    {
-      title: "Construction",
-      details:
-        "We support construction firms with skilled staffing, contract compliance, and shift planning.",
-      bgImage: "/images/construction.jpg",
-      link: "/sectors/construction",
-    },
-    {
-      title: "Healthcare",
-      details:
-        "We help healthcare businesses with compliant contracts, shift scheduling, and employee concerns.",
-      bgImage: "/images/tech.jpg",
-      link: "/sectors/healthcare",
-    },
-    {
-      title: "Logistics & Transport",
-      details:
-        "We optimize logistics and transport businesses with efficient workforce management.",
-      bgImage: "/images/logistics.jpg",
-      link: "/sectors/logistics",
-    },
-    {
-      title: "Nonprofits & NGOs",
-      details:
-        "We help nonprofit organizations & NGOs with compliant contracts, shift scheduling, and HR support.",
-      bgImage: "/images/finance.jpg",
-      link: "/sectors/nonprofits",
-    },
-  ];
+  
 
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -159,12 +103,10 @@ export default function SectorsWeCover() {
                         {service.details}
                       </p>
                       <Link
-                        href={service.link}
+                        href={`/industries/${service.slug}`}
                         className="mt-1 flex items-center gap-2 text-[var(--primary-400)] hover:underline"
                       >
-                        <h3 >
-                          Learn more
-                        </h3>
+                        <h3>Learn more</h3>
                         <ArrowRightIcon className="h-7 w-7" />
                       </Link>
                     </>
