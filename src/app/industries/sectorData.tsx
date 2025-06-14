@@ -151,7 +151,8 @@ export const services: Sector[] = [
     details:
         "We help healthcare businesses with compliant contracts, shift scheduling, and employee concerns.",
       bgImage: "/images/healthcare.png",
-    sections: [
+    
+      sections: [
       {
         heading: "Reliable HR for Health Professionals",
         description:
