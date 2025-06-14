@@ -27,11 +27,11 @@ const renderTable = (table: string[][], key: number) => {
   const [header, ...body] = table;
 
   return (
-    <table key={key} className="w-full border border-gray-300 text-left mb-4">
+    <table key={key} className="w-full  text-left mb-4">
       <thead className="bg-gray-100">
         <tr>
           {header.map((cell, colIndex) => (
-            <th key={colIndex} className="border px-4 py-2 text-sm font-semibold">
+            <th key={colIndex} className="border border-[var(--secondary-100)] px-4 py-6 text-sm text-center font-bold">
               {cell}
             </th>
           ))}
@@ -41,7 +41,7 @@ const renderTable = (table: string[][], key: number) => {
         {body.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {row.map((cell, colIndex) => (
-              <td key={colIndex} className="border px-4 py-2 text-sm">
+              <td key={colIndex} className="border border-[var(--secondary-100)] px-4 py-6 text-sm">
                 {cell}
               </td>
             ))}
@@ -57,7 +57,7 @@ const LegalDocument: React.FC<LegalDocumentProps> = ({ sections }) => {
     <div className="text-gray-800 font-sans">
       {sections.map((section, i) => (
         <div key={i} className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-700 mb-4">{section.title}</h2>
+          <p className=" font-bold  mb-4">{section.title}</p>
 
           {section.content?.map((item, k) => {
             if (item.type === "paragraph" && typeof item.value === "string") {
@@ -102,9 +102,9 @@ const LegalDocument: React.FC<LegalDocumentProps> = ({ sections }) => {
 
           {section.subsections.map((sub, j) => (
             <div key={j} className="mb-6">
-              <h3 className="text-lg font-bold mb-2">
-                {sub.number}. {sub.subtitle}
-              </h3>
+              <p className="text-lg text-[var(--primary-color)] font-bold mb-2">
+                {sub.number} {sub.subtitle}
+              </p>
 
               {sub.content.map((item, k) => {
                 if (item.type === "paragraph" && typeof item.value === "string") {
