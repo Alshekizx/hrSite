@@ -52,7 +52,7 @@ const renderTable = (table: string[][], key: number) => {
   );
 };
 
-const LegalDocument: React.FC<LegalDocumentProps> = ({ header, sections }) => {
+const LegalDocument: React.FC<LegalDocumentProps> = ({ sections }) => {
   return (
     <div className="text-gray-800 font-sans">
       {sections.map((section, i) => (

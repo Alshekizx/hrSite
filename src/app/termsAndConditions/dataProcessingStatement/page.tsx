@@ -1,5 +1,4 @@
 'use client';
-import { useState } from "react";
 import LegalDocument , {LegalSection} from "../agreement";
 import TermParent from "../termsParent";
 
