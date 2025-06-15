@@ -58,3 +58,17 @@
   </div>
 </div>
 </div>
+
+
+
+
+
+        <HeroSection
+              title="Our Prices"
+              description="tips on recruitment and shift-based workforce management for HR teams, locum workers, and business leaders."
+              breadcrumbs={[
+                { label: 'Home', href: '/' },
+                { label: 'Our Prices' },
+              
+              ]}
+            />

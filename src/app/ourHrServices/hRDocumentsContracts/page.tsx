@@ -127,7 +127,7 @@ export default function OurHrServices2() {
 
 
   return (
-    <div className="pt-10 flex flex-col w-full gap-20 ">
+    <div className="pt-10 flex flex-col items-center w-full gap-20 ">
     <HeroSection
       title="HR Documents & Contracts"
       description="Insights, trends, and practical tips on recruitment and shift-based workforce management for HR teams, locum workers, and business leaders."

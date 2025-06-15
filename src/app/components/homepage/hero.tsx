@@ -3,8 +3,9 @@ import { StarIcon } from '@heroicons/react/24/solid';
 
 export default function Hero() {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between pt-20 lg:pt-0 gap-10 bg-[var(--primary-100)]">
-      <div className="flex flex-col gap-12 w-full pl-[2rem] pr-[2rem] lg:pl-[5rem]" >
+    <div className="flex flex-col w-full bg-[var(--primary-100)] items-center">
+      <div className="max-w-[1400px] flex flex-col lg:flex-row items-center justify-between pt-20 lg:pt-0 gap-10 bg-[var(--primary-100)]">
+      <div className=" flex flex-col gap-12 w-full pl-[2rem] pr-[2rem] lg:pl-[5rem]" >
         <h2 className="text-[var(--primary-color)]">
           Your 
           {" "}  
@@ -61,6 +62,7 @@ export default function Hero() {
         priority
       />
   </div>
+    </div>
     </div>
   );
 }

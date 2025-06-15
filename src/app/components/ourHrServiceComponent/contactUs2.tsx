@@ -5,8 +5,8 @@ const ContactForm2 = () => {
   return (
     <section className="flex  flex-col lg:flex-row items-stretch ">
       {/* Left: Form Section */}
-      <div className="w-full lg:w-1/2 bg-[var(--primary-100)] px-[2rem] lg:pl-[5rem]  py-16">
-        <div className="form-container border border-[var(--primary-color)] bg-white rounded-t-lg overflow-hidden flex flex-col h-full">
+      <div className="w-full flex flex-col items-end lg:w-1/2 bg-[var(--primary-100)] px-[2rem] lg:pl-[5rem]  py-16">
+        <div className="form-container w-full max-w-[600px] border border-[var(--primary-color)] bg-white rounded-t-lg overflow-hidden flex flex-col h-full">
           <div className="py-6 px-6 bg-[var(--primary-color)] space-y-2">
             <p className="font-semibold text-white text-lg">Contact Us</p>
             <span className="text-white text-sm">
@@ -67,7 +67,7 @@ const ContactForm2 = () => {
       </div>
 
       {/* Right: Image Section (visible only on large screens) */}
-      <div className="hidden lg:flex w-full lg:w-1/2 justify-center items-center p-y px-[2rem] lg:pr-[5rem] relative overflow-hidden min-h-[600px]">
+      <div className="hidden lg:flex w-full max-w-[700px] lg:w-1/2 justify-center items-center p-y px-[2rem] lg:pr-[5rem] relative overflow-hidden min-h-[600px]">
         <Image
           src="/images/contactFormImg2.png"
           alt="Contact Form Illustration"

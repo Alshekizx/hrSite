@@ -5,6 +5,7 @@ import HeroSection from "../components/ourHrServiceComponent/heroSection";
 import { pricingPlans, PricingPlan, featureDetails } from "./priceData";
 import { CheckCircleIcon, XCircleIcon,InformationCircleIcon } from "@heroicons/react/24/solid";
 import React from "react";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
 const getIcon = (enabled: boolean) => {
   return enabled ? (
@@ -30,6 +31,7 @@ const getFeatureStatus = (
 const PricesPage = () => {
   const [expandedPlans, setExpandedPlans] = useState<Record<number, boolean>>({});
   const [openDropdownFeature, setOpenDropdownFeature] = useState<string | null>(null);
+  const [showFeatureComparison, setShowFeatureComparison] = useState(false);
   
    const toggleExpand = (index: number) => {
     setExpandedPlans((prev) => ({
@@ -39,7 +41,7 @@ const PricesPage = () => {
   };
 
   return (
-    <section className="pt-10">
+    <section className="pt-10 flex flex-col items-center">
       <HeroSection
         title="Our Prices"
         description="tips on recruitment and shift-based workforce management for HR teams, locum workers, and business leaders."
@@ -174,52 +176,66 @@ const PricesPage = () => {
  
 
   <div className="mt-16">
-  <div className="text-center mb-6">
-    <button className="text-[var(--primary-color)] font-semibold border border-[var(--primary-color)] rounded-full px-4 py-1">
-      Complete Features Comparison
-    </button>
+  <div className=" flex flex-col items-center text-center mb-6">
+    <button
+  onClick={() => setShowFeatureComparison((prev) => !prev)}
+  className="text-[var(--primary-color)] font-semibold border border-[var(--primary-color)] rounded-full px-4 py-1 flex items-center gap-2"
+>
+  {showFeatureComparison ? "Hide Feature Comparison" : "Complete Features Comparison"}
+  {showFeatureComparison ? (
+    <ChevronUpIcon className="h-4 w-4 text-[var(--primary-color)]" />
+  ) : (
+    <ChevronDownIcon className="h-4 w-4 text-[var(--primary-color)]" />
+  )}
+</button>
   </div>
 
+          
+          {showFeatureComparison && (
   <div className="overflow-x-auto">
-        <FeatureTable
+    <FeatureTable
       sectionTitle="HR Software"
-      features={["Document Storage",
-          "Employee Management",
-          "Geo-Fence Clock-In",
-          "Employee SelfService",
-          "HR Mobile App",
-          "Overtime Tracking Tool",
-          "Performance Management",
-          "Goal Tracking",
-          "Digital Rotas",
-          "Shift Scheduling",
-          "Leave Management",
-          "Attendance Management",
-          "Holiday Scheduling"]}
+      features={[
+        "Document Storage",
+        "Employee Management",
+        "Geo-Fence Clock-In",
+        "Employee SelfService",
+        "HR Mobile App",
+        "Overtime Tracking Tool",
+        "Performance Management",
+        "Goal Tracking",
+        "Digital Rotas",
+        "Shift Scheduling",
+        "Leave Management",
+        "Attendance Management",
+        "Holiday Scheduling"
+      ]}
       sectionKey="hrSoftware"
       openDropdownFeature={openDropdownFeature}
-  setOpenDropdownFeature={setOpenDropdownFeature}
+      setOpenDropdownFeature={setOpenDropdownFeature}
     />
 
     <FeatureTable
       sectionTitle="HR Support"
-      features={["HR Support Tickets",
-                    "Employment LawAdvice",
-                    "Digital Hr Documents",
-                    "HR Audits",
-                    "HR Documentation Support",
-                    "HR Policy Development",
-                    "Unlimited Digital Contracts",
-                    "Periodic Documentation Review",
-                    "Document Storage",
-                    "Updating Docs On Law Changes",
-                    "E-Signatures"]}
-                  sectionKey="hrSupport"
-                  openDropdownFeature={openDropdownFeature}
-              setOpenDropdownFeature={setOpenDropdownFeature}
+      features={[
+        "HR Support Tickets",
+        "Employment LawAdvice",
+        "Digital Hr Documents",
+        "HR Audits",
+        "HR Documentation Support",
+        "HR Policy Development",
+        "Unlimited Digital Contracts",
+        "Periodic Documentation Review",
+        "Document Storage",
+        "Updating Docs On Law Changes",
+        "E-Signatures"
+      ]}
+      sectionKey="hrSupport"
+      openDropdownFeature={openDropdownFeature}
+      setOpenDropdownFeature={setOpenDropdownFeature}
     />
 
-     <FeatureTable
+    <FeatureTable
       sectionTitle="HR Software & HR Support"
       features={[
         "Employee Relations Support",
@@ -230,13 +246,14 @@ const PricesPage = () => {
         "Offer Management",
         "Onboarding Coordination",
         "All CoreFeatures",
-        "All Essential Features",]}
+        "All Essential Features"
+      ]}
       sectionKey="hrSoftwareSupport"
       openDropdownFeature={openDropdownFeature}
-  setOpenDropdownFeature={setOpenDropdownFeature}
+      setOpenDropdownFeature={setOpenDropdownFeature}
     />
-   
   </div>
+)}
 </div>
 
       </div>

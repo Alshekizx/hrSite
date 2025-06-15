@@ -4,9 +4,10 @@ import Image from "next/image";
 const ContactForm = () => {
   return (
     <section
-      className="containerDiv bg-[var(--primary-100)] flex flex-col lg:flex-row gap-10 items-stretch"
+      className=" bg-[var(--primary-100)] flex flex-col items-center w-full "
       style={{ paddingTop: "100px", paddingBottom: "100px" }}
     >
+      <div className="containerDiv flex flex-col lg:flex-row gap-10 items-stretch">
       {/* Left: Form Section */}
       <div className="form-container w-full lg:w-1/2 border border-[var(--primary-color)] bg-white rounded-t-lg overflow-hidden flex flex-col">
         <p className="p-6 font-semibold bg-[var(--primary-color)] text-white">
@@ -93,6 +94,7 @@ const ContactForm = () => {
           className="object-cover"
           priority
         />
+      </div>
       </div>
     </section>
   );

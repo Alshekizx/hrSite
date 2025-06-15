@@ -137,7 +137,7 @@ export default function OurHrServices1() {
 
 
   return (
-    <div className="pt-10 flex flex-col w-full gap-20 ">
+    <div className="pt-10 flex flex-col w-full gap-20 items-center ">
     <HeroSection
       title="HR and Employment Law Advisory"
       description="Insights, trends, and practical tips on recruitment and shift-based workforce management for HR teams, locum workers, and business leaders."
