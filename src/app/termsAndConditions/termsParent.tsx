@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
+
 import HeroSection from "../components/ourHrServiceComponent/heroSection";
 
 const navLinks = [
