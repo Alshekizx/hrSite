@@ -14,7 +14,9 @@ export default function Home() {
     <div className="pt-16 flex flex-col items-center gap-10">
      <Hero/>
      <WhoWeSupport/>
+     <div className="w-full">
      <SectorsWeCover/>
+     </div>
      <Features/>
      <OuHrApps/>
      <FaqAccordion/>

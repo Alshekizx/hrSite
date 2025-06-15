@@ -31,7 +31,7 @@ export default function SectorsWeCover() {
   };
 
   return (
-    <div className="relative max-w-[1400px] flex flex-col items-center justify-center gap-16 py-20 text-white">
+    <div className="relative flex flex-col items-center justify-center gap-16 py-20 text-white">
       <div className="relative z-10 text-center w-full max-w-[800px]">
         <h3 className="text-[var(--primary-color)] text-2xl font-bold">
           Sectors We Cover
@@ -71,9 +71,9 @@ export default function SectorsWeCover() {
           <h1 className="absolute top-10 left-10 z-30  " style={{color:"#ffffffbb", fontWeight:'bold' }}>Industries</h1>
           <div
             ref={scrollRef}
-            className="relative flex w-full z-10"
+            className="relative  flex w-full z-10"
             style={{
-              overflowX: "hidden",
+              overflowX: "auto",
               scrollBehavior: "smooth",
             }}
           >
