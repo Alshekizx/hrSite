@@ -3,9 +3,9 @@ import { StarIcon } from '@heroicons/react/24/solid';
 
 export default function Hero() {
   return (
-    <div className="flex flex-col w-full bg-[var(--primary-100)] items-center">
-      <div className="max-w-[1400px] flex flex-col lg:flex-row items-center justify-between pt-20 lg:pt-0 gap-10 bg-[var(--primary-100)]">
-      <div className=" flex flex-col gap-12 w-full pl-[2rem] pr-[2rem] lg:pl-[5rem]" >
+    <div className="flex flex-col w-full  items-center">
+      <div className="max-w-[1400px] flex flex-col lg:flex-row items-center  pt-20 lg:pt-0 gap-12 bg-[#04469F0A]">
+      <div className=" flex flex-col gap-6 w-full pl-[2rem] pr-[2rem]" >
         <h2 className="text-[var(--primary-color)]">
           Your 
           {" "}  
@@ -13,7 +13,7 @@ export default function Hero() {
            {" "}for Reliable HR Support
          
         </h2>
-        <p className="text-[var(--text-muted)]">
+        <p style={{fontSize:'27px'}} className="text-[var(--text-muted)]">
           From compliance to employee relations, 
           we provide expert HR services designed to keep Irish businesses protected.
         </p>

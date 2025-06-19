@@ -78,17 +78,20 @@ export default function Header() {
             <Link
               href="/myApplications"
               className="block px-4 py-2 hover:text-[var(--primary-color)] text-[var(--text-dark)]"
+              style={{fontSize:'18px'}}
             >
               My Applications
             </Link>
             <Link
               href="/myProfile"
+              style={{fontSize:'18px'}}
               className="block px-4 py-2 hover:text-[var(--primary-color)] text-[var(--text-dark)]"
             >
               My Profile
             </Link>
 
-          <button onClick={logout} className="block px-4 py-2 hover:text-[var(--primary-color)] text-[var(--text-dark)]">
+          <button onClick={logout} className="block px-4 py-2 hover:text-[var(--primary-color)] text-[var(--text-dark)]"
+          style={{fontSize:'18px'}}>
             Logout
           </button>
 
@@ -96,7 +99,7 @@ export default function Header() {
         )}
       </div>
     ) : (
-      <Link href="/auth/login" className=" inverseButton" style={{borderRadius:"0", borderWidth:' 2px',  padding: "5px 15px"}}>
+      <Link href="/auth/login" className=" inverseButton" style={{borderRadius:"0", borderWidth:' 2px',  padding: "5px 15px", fontSize:'18px', backgroundColor:'white'}}>
         Login
       </Link>
     );
@@ -107,11 +110,11 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
   const isActive = (path: string) => pathname === path;
 
   const linkClass = (path: string) =>
-    `  transition pb-2 ${isActive(path) ? 'text-[var(--primary-color)]  border-b-2 border-[var(--primary-color)] ' : ''}`;
+    `  transition pb-1 ${isActive(path) ? 'text-[var(--primary-color)]  border-b-2 border-[var(--primary-600)] ' : ''}`;
 
   return (
     <>
-      <Link href="/" className={linkClass('/')} onClick={closeMenu}>
+      <Link href="/" style={{fontSize:'18px'}} className={linkClass('/')} onClick={closeMenu}>
         Home
       </Link>
 
@@ -121,7 +124,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
             e.stopPropagation();
             setIsHrDropdownOpen((prev) => !prev);
           }}
-          className=" transition flex items-center space-x-1"
+          style={{fontSize:'18px'}} className=" transition flex items-center space-x-1"
         >
           <span>Our HR Services</span>
           <ArrowDownRightIcon className="h-4 w-4 " />
@@ -183,6 +186,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
       <Link
         href="/ourHrExperties"
+        style={{fontSize:'18px'}}
         className={linkClass('/ourHrExperties')}
         onClick={closeMenu}
       >
@@ -190,6 +194,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       </Link>
       <Link
         href="/prices"
+        style={{fontSize:'18px'}}
         className={linkClass('/prices')}
         onClick={closeMenu}
       >
@@ -197,6 +202,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       </Link>
       <Link
         href="/blog"
+        style={{fontSize:'18px'}}
         className={linkClass('/blog')}
         onClick={closeMenu}
       >
@@ -212,21 +218,27 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
   return (
     <header className="bg-[var(--header-color)] flex flex-col items-center text-[var(--text-dark)] border-b border-[var(--border-color)] fixed top-0 w-full z-50">
-      <div className=' max-w-[1400px] w-full '>
-      <div className="px-4 py-4 flex justify-between items-center">
+      <div className=' max-w-[1400px] w-full px-[2rem] md:px-[5rem] '>
+      <div className="py-5 flex justify-between items-center">
         {/* Logo and Icons */}
-        <div className="flex items-center space-x-1">
-          <div className='hidden md:flex flex-row gap-1 items-center'>
-          <HomeIcon className="h-8 w-8 text-[var(--primary-color)]" />
+        <div className="flex items-center space-x-2">
+          <div className='hidden md:flex flex-row gap-2 items-center'>
+          <Image
+              src="/images/home1.png"
+              alt="Logo"
+              width={31}
+              height={34}
+              className="h-full"
+            />
           <ChevronRightIcon className="h-8 w-8  text-[var(--text-muted)]" />
          </div>
            <Link href="/" className="flex items-center ">
             <Image
               src="/logos/MployusHRLogo.png"
               alt="Logo"
-              width={120}
-              height={120}
-              className="object-contain"
+              width={186}
+              height={56}
+              className="h-full"
             />
           </Link>
         </div>

@@ -45,7 +45,7 @@ export const featureDetails: FeatureDetails = {
     "Hiring Manager Training": "Train hiring managers on best practices for recruitment.",
     "Offer Management": "Help with preparing, sending, and negotiating job offers.",
     "Onboarding Coordination": "Coordinate new hire onboarding with structured workflows.",
-    "All CoreFeatures": "Access all features included in the CORE plan.",
+    "All Core Features": "Access all features included in the CORE plan.",
     "All Essential Features": "Access all features included in the ESSENTIALS plan.",
   }
 };
@@ -121,7 +121,7 @@ export const pricingPlans: PricingPlan[] = [
         "Hiring Manager Training": false,
         "Offer Management": false,
         "Onboarding Coordination": false,
-        "All CoreFeatures": false,
+        "All Core Features": false,
         "All Essential Features": false,
       }
     }
@@ -176,7 +176,7 @@ export const pricingPlans: PricingPlan[] = [
         "Hiring Manager Training": false,
         "Offer Management": false,
         "Onboarding Coordination": false,
-        "All CoreFeatures": false,
+        "All Core Features": false,
         "All Essential Features": false,
       }
     }
@@ -195,7 +195,7 @@ export const pricingPlans: PricingPlan[] = [
     features: {
       hrSoftwareSupport: {
         "All Essential Features": true,
-        "All CoreFeatures": true,
+        "All Core Features": true,
         "Onboarding Coordination": true,
         "Offer Management": true,
         "Employee Relations Support": true,

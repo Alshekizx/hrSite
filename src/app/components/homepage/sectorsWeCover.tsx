@@ -12,23 +12,38 @@ export default function SectorsWeCover() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scroll = (direction: "left" | "right") => {
-    let newIndex = selectedIndex;
-    if (direction === "left") {
-      newIndex = (selectedIndex - 1 + services.length) % services.length;
-    } else if (direction === "right") {
-      newIndex = (selectedIndex + 1) % services.length;
-    }
+  let newIndex = selectedIndex;
 
+  if (direction === "left") {
+    if (newIndex > 0) {
+      newIndex--;
+    }
+  } else if (direction === "right") {
+    newIndex++;
+  }
+
+  const container = scrollRef.current;
+
+  if (newIndex >= services.length) {
+    // Reset to the beginning for infinite effect
+    newIndex = 0;
     setSelectedIndex(newIndex);
-
-    const container = scrollRef.current;
     if (container) {
-      container.scrollTo({
-        left: newIndex * cardWidth,
-        behavior: "smooth",
-      });
+      container.scrollTo({ left: 0, behavior: "instant" });
     }
-  };
+    return;
+  }
+
+  setSelectedIndex(newIndex);
+  if (container) {
+    container.scrollTo({
+      left: newIndex * cardWidth,
+      behavior: "smooth",
+    });
+  }
+};
+
+  const extendedServices = [...services, ...services.slice(0, 3)];
 
   return (
     <div className="relative flex flex-col items-center justify-center gap-16 py-20 text-white">
@@ -68,19 +83,19 @@ export default function SectorsWeCover() {
           }}
         >
           <div className="absolute inset-0 bg-black/50 z-0"></div>
-          <h1 className="absolute top-10 left-10 z-30  " style={{color:"#ffffffbb", fontWeight:'bold' }}>Industries</h1>
+          <h1  className="absolute top-10 left-10 z-30  " style={{color:"#ffffffbb", fontWeight:'bold', fontSize:'94px' }}>Industries</h1>
           <div
             ref={scrollRef}
-            className="relative  flex w-full z-10"
+            className="relative scrollbar-hide  flex w-full z-10"
             style={{
               overflowX: "auto",
               scrollBehavior: "smooth",
             }}
           >
-            {services.map((service, index) => (
+            {extendedServices.map((service, index) => (
               <div
                 key={index}
-                className={`cursor-pointer transition-all duration-300 ease-in-out min-w-[350px] h-[95vh] p-6 border ${
+                className={`cursor-pointer transition-all duration-300 ease-in-out min-w-[350px] h-[110vh] p-6 border ${
                   index === selectedIndex
                     ? "border-white/20 bg-black/50"
                     : "border-white/20 bg-transparent"
@@ -94,9 +109,9 @@ export default function SectorsWeCover() {
                 }}
               >
                 <div className="flex flex-col h-full justify-end items-start text-start">
-                  <h3 className="text-xl font-bold mb-1">
+                  <h2 className=" font-bold mb-1" style={{color:'white'}}>
                     {service.title}
-                  </h3>
+                  </h2>
                   {index === selectedIndex && (
                     <>
                       <p className="text-sm max-w-[300px]">

@@ -11,6 +11,9 @@
   --primary-200: #B3D1FF;   /* Soft blue tint */
   --primary-300: #66A2FF;   /* Mid-light blue */
   --primary-400: #3380FF; 
+
+  --primary-500: #0A53BE;   /* Base primary color - Strong blue */
+  --primary-600: #08449C; 
   
 
   --primaryTrans-color: #0A53BE66; /* 40% opacity of primary */
@@ -57,7 +60,8 @@
   --color-primary-200: var(--primary-200);
   --color-primary-300: var(--primary-300);
   --color-primary-400: var(--primary-400);
-  --color-primary-500: var(--primary-color);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
   --color-primaryTrans: var(--primaryTrans-color);
 
   /* Secondary Colors */
@@ -80,7 +84,10 @@
   --primary-100: #E6F0FF;   /* Very light blue tint */
   --primary-200: #B3D1FF;   /* Soft blue tint */
   --primary-300: #66A2FF;   /* Mid-light blue */
-  --primary-400: #3380FF;   /* Medium blue */
+  --primary-400: #3380FF; 
+   --primary-500: #0A53BE;
+  --primary-600: #08449C; 
+  /* Medium blue */
 
   --primaryTrans-color: #0A53BE66; /* 40% opacity of primary */
 
@@ -116,28 +123,29 @@ body {
 }
 
 h1, h2{
-  font-weight: 500;
+  
   line-height: 1.2;
   color: var(--text-dark);
 }
 
 h1 {
-  font-size: 3rem; /* Increased from 2.5rem */
+  font-size: 50px; /* 3rem */
 }
 
 h2 {
-  font-size: 2.5rem; /* Increased from 2rem */
+  font-size: 40px; /* 2.5rem */
   color: var(--primary-color);
 }
 
 h3 {
-  font-size: 2rem; 
-   font-weight: 400;
+  font-size: 34px; /* 2rem */
+ 
 }
 
 p {
-  font-size: 1.125rem; /* Increased from 1rem */
+  font-size: 20px; /* 1.125rem */
 }
+
  .links{
   color: var(--text-muted);
   text-decoration: none;
@@ -160,7 +168,7 @@ p {
 
 .button,
 .inverseButton {
-  font-size: 1rem; 
+  font-size: 20px; 
   font-weight: 500;
 }
 
@@ -295,7 +303,7 @@ p {
 }
 
 .containerDiv{
-  padding: 2rem 5rem;
+  padding: 2rem;
   min-height: 50vh;
   width: 100%;
   max-width: 1400px;
