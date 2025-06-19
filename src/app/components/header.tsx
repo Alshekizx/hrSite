@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import {
   Bars3Icon,
-  HomeIcon,
   ChevronRightIcon,
   ArrowDownRightIcon,
   ScaleIcon,
