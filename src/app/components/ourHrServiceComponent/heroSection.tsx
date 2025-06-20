@@ -27,7 +27,7 @@ export default function HeroSection({
       className={`relative max-w-[1400px]  w-full flex flex-col items-center justify-center pt-20 px-4 h-80 text-white text-center `}
     >
       {breadcrumbs.length > 0 && (
-        <div className="absolute top-16 left-6 flex items-center gap-1 text-sm">
+        <div className="absolute top-20 left-6 flex items-center gap-1 text-sm">
           {breadcrumbs.map((item, index) => (
             <span key={index} className="flex items-center gap-1">
               {item.href ? (

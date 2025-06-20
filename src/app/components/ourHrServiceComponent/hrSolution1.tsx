@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { CheckCircleIcon } from '@heroicons/react/20/solid';
 
@@ -23,17 +23,15 @@ export default function HrSection({
   image,
 }: HrSectionProps) {
   const leftRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState<number | undefined>(undefined);
+ 
 
   useEffect(() => {
-    if (leftRef.current) {
-      setHeight(leftRef.current.offsetHeight);
-    }
+
   }, [title, description, features]);
 
   return (
     <section className="bg-[var(--background-light)]  containerDiv" style={{padding:'auto 100px ', minHeight: '50px'}}>
-      <div className="grid md:grid-cols-2 gap-10 items-start">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
         <div ref={leftRef} className="flex flex-col gap-6 justify-center h-fit">
           {title && <h3 className="text-3xl text-[var(--primary-color)]">{title}</h3>}
           {description && (
@@ -59,7 +57,7 @@ export default function HrSection({
           </ul>
         </div>
 
-        <div style={{ height }} className="rounded-lg h-full ">
+        <div className="rounded-lg h-full ">
           <Image
             src={image}
             alt={title ?? 'section image'}

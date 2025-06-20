@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { PlusIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -11,22 +12,22 @@ const faqs = [
   {
     question: "How can Mployus HR Consulting help improve my company’s HR processes?",
     answer:
-      "Yes, Mployyus enables full shift scheduling, availability tracking, and on-demand management of locum or temporary staff via a central dashboard.",
+      "We conduct thorough assessments of your current HR practices and implement tailored solutions suitable to your business to enhance efficiency, ensure compliance, and improve overall employee satisfaction.",
   },
   {
     question: "Can Mployus HR Consulting assist with compliance and regulatory issues?",
     answer:
-      "Absolutely. Mployyus is designed to be scalable and budget-friendly, making it a great fit for startups and small businesses that need agile HR solutions.",
+      "Absolutely. We help ensure that your company complies with all relevant employment laws and regulations, thereby reducing the risk of legal issues and penalties.",
   },
   {
     question: "How do you handle employee relations issues?",
     answer:
-      "Our platform focuses on real-time responsiveness, AI-driven automation, and a seamless user experience tailored for healthcare and fast-paced workforces.",
+      "Our team provides expert guidance on handling employee relations issues, including conflict resolution, disciplinary actions, and fostering a positive workplace culture.",
   },
   {
     question: "Can you assist with creating an employee handbook?",
     answer:
-      "Our platform focuses on real-time responsiveness, AI-driven automation, and a seamless user experience tailored for healthcare and fast-paced workforces.",
+      "Yes, we can help create a comprehensive employee handbook that outlines your company’s policies, procedures, and expectations.",
   },
 ];
 
@@ -40,10 +41,10 @@ const FaqAccordion = () => {
   return (
     <section className="containerDiv">
       <div>
-        <h3 className="text-start text-[var(--primary-color)] text-3xl font-bold mb-4">
+        <h4 className="text-start text-[var(--primary-color)] text-3xl font-bold mb-4" style={{fontSize:'44px'}}>
           Frequently Asked Questions
-        </h3>
-        <p className="text-start text-[var(--text-muted)] mb-10 text-sm">
+        </h4>
+        <p className="text-start text-[var(--text-muted)] mb-10 text-sm" style={{fontSize:'18px'}}>
           Got questions? Our FAQ section provides answers to common inquiries on hiring, workforce
           management, locum staffing, and HR software, helping you navigate our solutions with ease.
         </p>
@@ -54,23 +55,23 @@ const FaqAccordion = () => {
             return (
               <div
                 key={index}
-                className={`rounded-lg p-6 border border-[var(--border-color)] transition-all duration-300 ${
+                className={`rounded-lg p-6  transition-all duration-300 ${
                   isOpen
                     ? "bg-[var(--primary-color)] text-white"
-                    : "bg-[var(--card-bg)] text-[var(--text-dark)]"
+                    : "bg-[var(--primary-100)] text-[var(--text-dark)]"
                 }`}
               >
                 <div
                   className="flex justify-between items-center cursor-pointer"
                   onClick={() => toggle(index)}
                 >
-                  <h3 className="font-semibold text-base">
+                  <p className="" style={{fontSize:'24px'}}>
                     {faq.question}
-                  </h3>
+                  </p>
                   <div
                     className="rounded-lg p-2"
                     style={{
-                      backgroundColor: "var(--primary-100)",
+                      backgroundColor: "var(--primary-200)",
                     }}
                   >
                     {isOpen ? (
@@ -85,12 +86,15 @@ const FaqAccordion = () => {
                     id={`faq-answer-${index}`}
                     className="mt-4 border-t border-white/30 pt-4 text-sm text-white"
                   >
-                    {faq.answer}
+                    <p style={{fontSize:'22px'}}>{faq.answer}</p>
                   </div>
                 )}
               </div>
             );
           })}
+        </div>
+        <div>
+          <Link className=" " href="/faqPage"><p className="text-primary mt-10 hover:underline" style={{fontSize:'24px'}}>View More</p></Link>
         </div>
       </div>
     </section>

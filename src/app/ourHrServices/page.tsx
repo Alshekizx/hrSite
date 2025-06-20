@@ -7,6 +7,8 @@ import HrSection2 from "../components/ourHrServiceComponent/hrSolution2";
 import HeroSection from "../components/ourHrServiceComponent/heroSection";
 import Image from "next/image";
 
+
+
 const serviceData = {
   headline: 'Comprehensive HR Support for Your Business',
   subtext:
@@ -160,7 +162,7 @@ export default function OurHrServices1() {
       <div className="flex flex-col items-center gap-6  ">
          <div className="text-center w-full max-w-[800px] ">
           <h3 className="text-[var(--primary-color)] text-2xl font-bold">Why Choose Mployus HR?</h3>
-          <p className="text-[var(--text-muted)]">
+          <p className="text-[var(--text-muted)]"  style={{fontSize:'24px'}}>
             We provide proactive, tailored HR solutions to keep your business compliant and efficient. Our team stays ahead of Irish employment law changes, offering continuous support to navigate complex HR challenges.
           </p>
       </div>

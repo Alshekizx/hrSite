@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef} from 'react';
 import Image from 'next/image';
 import { CheckCircleIcon } from '@heroicons/react/20/solid';
 
@@ -23,12 +23,10 @@ export default function AnotherHrSectionInverse({
   image,
 }: HrSectionProps) {
   const contentRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState<number | undefined>(undefined);
+  
 
   useEffect(() => {
-    if (contentRef.current) {
-      setHeight(contentRef.current.offsetHeight);
-    }
+    
   }, [title, description, features]);
 
   return (
@@ -36,10 +34,10 @@ export default function AnotherHrSectionInverse({
       className="bg-[var(--background-light)] containerDiv px-[5%] py-12"
       style={{ minHeight: '50px' }}
     >
-      <div className="flex flex-col-reverse md:flex-row gap-10 items-center md:items-start justify-between">
+      <div className="flex flex-col-reverse md:flex-row gap-10 items-center justify-between">
         {/* Image */}
         <div
-          style={{ height }}
+         
           className="w-full md:w-1/2 flex justify-center items-center"
         >
           {image && (
@@ -48,7 +46,7 @@ export default function AnotherHrSectionInverse({
               alt={title || 'Section Image'}
               width={600}
               height={600}
-              className="w-full h-full object-contain"
+              className="w-full h-auto"
             />
           )}
         </div>
@@ -60,7 +58,7 @@ export default function AnotherHrSectionInverse({
         >
           {title && <h3 className="text-3xl text-[var(--primary-color)]">{title}</h3>}
           {description && (
-            <p className="text-[var(--text-muted)] text-lg">{description}</p>
+            <p className="text-[var(--text-muted)] text-lg" style={{fontSize:'24'}}>{description}</p>
           )}
 
           {features && features.length > 0 && (
@@ -72,7 +70,7 @@ export default function AnotherHrSectionInverse({
                     aria-hidden="true"
                   />
                   <div>
-                    <p className="text-[var(--text-muted)]">
+                    <p className="text-[var(--text-muted)] " style={{fontSize:'24'}}>
                       <strong className="text-[var(--primary-color)]">
                         {feature.title || 'Untitled'}
                       </strong>{' '}

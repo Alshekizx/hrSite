@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef} from 'react';
 import Image from 'next/image';
 import { CheckCircleIcon } from '@heroicons/react/20/solid';
 
@@ -23,21 +23,19 @@ export default function HrSection2({
   image,
 }: HrSectionProps) {
   const leftRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState<number | undefined>(undefined);
+ 
 
   useEffect(() => {
-    if (leftRef.current) {
-      setHeight(leftRef.current.offsetHeight);
-    }
+    
   }, [title, description, features]);
 
   return (
     <section className="bg-[var(--background-light)] containerDiv" style={{padding:'auto 100px ', minHeight: '50px'}}>
-      <div className="grid md:grid-cols-2 gap-10 items-start">
+      <div className="flex flex-col md:flex-row gap-10 justify-center items-center ">
         <div ref={leftRef} className="flex flex-col gap-6 justify-center h-fit">
-          {title && <h3 className="text-3xl text-[var(--primary-color)]">{title}</h3>}
+          {title && <h3 className="text-3xl text-[var(--primary-color)]"  style={{fontSize:'24px'}}>{title}</h3>}
           {description && (
-            <p className="text-[var(--text-muted)] text-lg">{description}</p>
+            <p className="text-[var(--text-muted)] text-lg"  style={{fontSize:'24px'}}>{description}</p>
           )}
 
           <ul className="space-y-6">
@@ -48,7 +46,7 @@ export default function HrSection2({
                   aria-hidden="true"
                 />
                 <div>
-                  <p className="text-[var(--text-muted)]">
+                  <p className="text-[var(--text-muted)] "  style={{fontSize:'24px'}}>
                   <strong className="text-[var(--primary-color)]">{feature.title}</strong>{' '}
                   
                     – {feature.description}
@@ -59,7 +57,7 @@ export default function HrSection2({
           </ul>
         </div>
 
-        <div style={{ height }} className="rounded-lg h-full bg-[var(--primary-100)] border-2 border-[var(--secondary-400)] p-4 overflow-hidden">
+        <div  className="rounded-xl h-full bg-[var(--primary-100)] border-2 border-[var(--secondary-400)] p-4 overflow-hidden">
           <Image
             src={image}
             alt={title ?? 'section image'}

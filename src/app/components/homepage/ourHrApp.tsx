@@ -9,7 +9,7 @@ export default function OuHrApps() {
   {/* Text Section */}
   <div className="w-full md:w-2/3 flex flex-col gap-6 justify-center py-6 sm:py-10">
     <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold">Our HR App</h3>
-    <p className="text-sm sm:text-base lg:text-lg text-white">
+    <p className="text-sm sm:text-base lg:text-lg text-white" style={{fontSize:'22px'}}>
      Our all-in-one HR app simplifies workforce management with tools for scheduling, time tracking, leave, expenses, and recruitment—built to support both full-time and locum teams while staying compliant with Irish employment laws.
     </p>
     <div className="flex space-x-4">
@@ -18,8 +18,8 @@ export default function OuHrApps() {
       <Image
         src="/images/GooglePlay.png"
         alt="Google Play"
-        width={150}
-        height={70}
+        width={231}
+        height={66}
         className="w-full h-auto"
       />
     </div>
@@ -29,8 +29,8 @@ export default function OuHrApps() {
       <Image
         src="/images/Apple.png"
         alt="Apple Store"
-        width={150}
-        height={70}
+        width={231}
+        height={66}
         className="w-full h-auto"
       />
     </div>

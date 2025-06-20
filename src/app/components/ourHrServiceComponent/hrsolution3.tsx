@@ -48,7 +48,7 @@ export default function HrSection3({
             </h3>
           )}
           {description && (
-            <p className="text-lg text-[var(--text-muted)]">
+            <p className="text-lg text-[var(--text-muted)]" style={{fontSize:'24'}}>
               {description}
             </p>
           )}
@@ -60,7 +60,7 @@ export default function HrSection3({
                   className="w-5 h-5 text-[var(--primary-color)] flex-shrink-0"
                   aria-hidden="true"
                 />
-                <p className="text-[var(--text-muted)]">
+                <p className="text-[var(--text-muted)]" style={{fontSize:'24'}}>
                   <strong className="text-[var(--primary-color)]">{feature.title}</strong>{' '}
                   – {feature.description}
                 </p>
@@ -76,7 +76,7 @@ export default function HrSection3({
             alt={title ?? 'Section image'}
             width={600}
             height={600}
-            className="w-full h-auto max-h-[400px] object-contain"
+            className="w-full h-auto "
           />
         </div>
       </div>

@@ -359,7 +359,7 @@ p {
 .custom-ring-color {
   --tw-ring-color: var(--primary-color);
   outline: none;
-  background-color: white;
+  
  
 }
 

@@ -14,7 +14,7 @@ export default function Home() {
     <div className="pt-16 flex flex-col items-center gap-10">
      <Hero/>
      <WhoWeSupport/>
-     <div className="w-full">
+     <div className="w-full max-w-[1400px]">
      <SectorsWeCover/>
      </div>
      <Features/>
