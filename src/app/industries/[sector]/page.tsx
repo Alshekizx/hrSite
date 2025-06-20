@@ -19,7 +19,7 @@ export default function SectorDetailPage() {
 
   return (
 
-    <div className="font-sans text-gray-800">
+    <div className="font-sans text-gray-800 ">
       {/* Hero Section */}
       <div className="relative h-[300px] md:h-[400px] w-full">
         <Image
@@ -35,7 +35,7 @@ export default function SectorDetailPage() {
       </div>
 
       {/* Content Section */}
-      <div className="containerDiv mt-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="containerDiv mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Content */}
         <div>
           {sector.sections.map((section, i) => (
