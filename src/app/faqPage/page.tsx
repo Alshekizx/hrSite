@@ -79,7 +79,11 @@ const [openIndex, setOpenIndex] = useState(0);
         ]}
       />
       <div className='containerDiv'>
-             <div>
+        
+             <div className='flex flex-col items-start'>
+              <div className= 'button my-10'>
+                <p >UK & NI FAQs</p> 
+              </div>
                     <h4 className="text-start text-[var(--primary-color)] text-3xl font-bold mb-4" style={{fontSize:'44px'}}>
                       Frequently Asked Questions
                     </h4>
