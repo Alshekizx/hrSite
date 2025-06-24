@@ -11,37 +11,43 @@ export default function SectorsWeCover() {
 
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const scroll = (direction: "left" | "right") => {
+const scroll = (direction: "left" | "right") => {
+  const container = scrollRef.current;
+  if (!container) return;
+
   let newIndex = selectedIndex;
 
   if (direction === "left") {
-    if (newIndex > 0) {
-      newIndex--;
-    }
-  } else if (direction === "right") {
+    newIndex = newIndex === 0 ? services.length - 1 : newIndex - 1;
+  } else {
     newIndex++;
   }
 
-  const container = scrollRef.current;
-
+  // If we've moved into the clones, snap back to beginning
   if (newIndex >= services.length) {
-    // Reset to the beginning for infinite effect
-    newIndex = 0;
+    // Scroll to clone first (smooth)
     setSelectedIndex(newIndex);
-    if (container) {
-      container.scrollTo({ left: 0, behavior: "instant" });
-    }
-    return;
-  }
+    container.scrollTo({
+      left: newIndex * cardWidth,
+      behavior: "smooth",
+    });
 
-  setSelectedIndex(newIndex);
-  if (container) {
+    // Then jump back to original first card (instant)
+    setTimeout(() => {
+      container.scrollTo({ left: 0, behavior: "instant" });
+      setSelectedIndex(0);
+    }, 300); // match scroll animation duration
+  } else {
+    setSelectedIndex(newIndex);
     container.scrollTo({
       left: newIndex * cardWidth,
       behavior: "smooth",
     });
   }
 };
+
+
+
 
   const extendedServices = [...services, ...services.slice(0, 3)];
 
@@ -77,7 +83,7 @@ export default function SectorsWeCover() {
         <div
           className="relative overflow-hidden"
           style={{
-            backgroundImage: `url(${services[selectedIndex].bgImage})`,
+            backgroundImage: `url(${extendedServices[selectedIndex]?.bgImage || ''})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             imageRendering: "auto",
@@ -93,23 +99,28 @@ export default function SectorsWeCover() {
               scrollBehavior: "smooth",
             }}
           >
-            {extendedServices.map((service, index) => (
-              <div
-                key={index}
-                className={`cursor-pointer transition-all duration-300 ease-in-out min-w-[350px] h-[110vh] p-6 border ${
-                  index === selectedIndex
-                    ? "border-white/20 bg-black/70"
-                    : "border-white/20 bg-transparent"
-                }`}
-                onClick={() => {
-                  setSelectedIndex(index);
-                  scrollRef.current?.scrollTo({
-                    left: index * cardWidth,
-                    behavior: "smooth",
-                  });
-                }}
-              >
-                <div className="flex flex-col h-full justify-end  gap-6 items-start text-start pb-10">
+            {extendedServices.map((service, index) => {
+  const isCloned = index >= services.length;
+  return (
+    <div
+      key={index}
+      className={`min-w-[350px] h-[110vh] p-6 border transition-all duration-300 ease-in-out ${
+        index === selectedIndex
+          ? "bg-black/70 border-white/20"
+          : "bg-transparent border-white/20"
+      } ${isCloned ? " cursor-pointer" : "cursor-pointer"}`}
+     onClick={() => {
+      const isClone = index >= services.length;
+      const actualIndex = isClone ? index - services.length : index;
+
+      setSelectedIndex(actualIndex);
+      scrollRef.current?.scrollTo({
+        left: actualIndex * cardWidth,
+        behavior: "smooth",
+      });
+    }}
+    >
+      <div className="flex flex-col h-full justify-end  gap-6 items-start text-start pb-10">
                   <h2 className=" font-bold mb-1" style={{color:'white'}}>
                     {service.title}
                   </h2>
@@ -128,8 +139,10 @@ export default function SectorsWeCover() {
                     </>
                   )}
                 </div>
-              </div>
-            ))}
+    </div>
+  );
+})}
+
           </div>
         </div>
       </div>
