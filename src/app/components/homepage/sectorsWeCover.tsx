@@ -108,7 +108,7 @@ export default function SectorsWeCover() {
                   });
                 }}
               >
-                <div className="flex flex-col h-full justify-end items-start text-start">
+                <div className="flex flex-col h-full justify-end  gap-6 items-start text-start pb-10">
                   <h2 className=" font-bold mb-1" style={{color:'white'}}>
                     {service.title}
                   </h2>
@@ -119,7 +119,7 @@ export default function SectorsWeCover() {
                       </p>
                       <Link
                         href={`/industries/${service.slug}`}
-                        className="mt-1 flex items-center gap-2 text-[var(--primary-400)] hover:underline"
+                        className="mt-1 flex items-center gap-2 text-[var(--primary-300)] hover:underline"
                       >
                         <h3>Learn more</h3>
                         <ArrowRightIcon className="h-7 w-7" />
