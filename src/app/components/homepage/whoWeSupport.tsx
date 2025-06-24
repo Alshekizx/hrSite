@@ -11,7 +11,8 @@ const features = [
 
 export default function WhoWeSupport() {
   return (
-    <div className="containerDiv flex flex-col lg:flex-row items-stretch justify-between gap-10">
+    <div className="">
+      <div className="containerDiv flex flex-col lg:flex-row items-stretch justify-between gap-10">
       
       {/* Image Section */}
       <div className="w-full lg:w-4/10">
@@ -58,6 +59,7 @@ export default function WhoWeSupport() {
           performance issues, and compliance, we ensure you&apos;re protected and proactive.
         </p>
       </div>
+    </div>
     </div>
   );
 }

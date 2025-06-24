@@ -46,7 +46,7 @@ export default function SectorsWeCover() {
   const extendedServices = [...services, ...services.slice(0, 3)];
 
   return (
-    <div className="relative flex flex-col items-center justify-center gap-16 py-20 text-white ">
+    <div className="relative flex flex-col items-center justify-center gap-16  text-white ">
       <div className="relative z-10 text-center w-full max-w-[800px]">
         <h3 className="text-[var(--primary-color)] text-2xl font-bold">
           Sectors We Cover
@@ -82,7 +82,7 @@ export default function SectorsWeCover() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/50 z-0"></div>
+          <div className="absolute inset-0 bg-black/20 z-0"></div>
           <h1  className="absolute top-10 left-10 z-30  " style={{color:"#ffffffbb", fontWeight:'bold', fontSize:'94px' }}>Industries</h1>
           <div
             ref={scrollRef}
@@ -97,7 +97,7 @@ export default function SectorsWeCover() {
                 key={index}
                 className={`cursor-pointer transition-all duration-300 ease-in-out min-w-[350px] h-[110vh] p-6 border ${
                   index === selectedIndex
-                    ? "border-white/20 bg-black/50"
+                    ? "border-white/20 bg-black/70"
                     : "border-white/20 bg-transparent"
                 }`}
                 onClick={() => {
