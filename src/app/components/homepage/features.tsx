@@ -248,8 +248,8 @@ const currentData = featureData[selectedFeature];
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {currentData.features.map((feat, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="w-10 h-10 flex items-center justify-center shrink-0">
+                <div key={index} className="flex items-start space-x-1">
+                  <div className="w-10 h-10 flex items-start justify-center shrink-0">
                     <feat.icon className="w-6 h-6 text-[var(--primary-color)]" />
                   </div>
                   <div>
