@@ -80,6 +80,7 @@ export default function SectorsWeCover() {
             backgroundImage: `url(${services[selectedIndex].bgImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            imageRendering: "auto",
           }}
         >
           <div className="absolute inset-0 bg-black/20 z-0"></div>
