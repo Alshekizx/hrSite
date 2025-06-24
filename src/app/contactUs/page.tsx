@@ -26,7 +26,7 @@ const ContactUs = () => {
                    ]}
                  />
       {/* ---------- HERO HEADER ---------- */}
-      <div className=" containerDiv  grid lg:grid-cols-2 gap-10 items-center">
+      <div className=" containerDiv  mx-auto grid lg:grid-cols-2 gap-10 items-center">
         {/* Text block */}
         <div>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
