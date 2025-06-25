@@ -1,15 +1,10 @@
 // src/app/layout.tsx
 
 import "../globals.css";
-import { Nunito } from 'next/font/google'
+
 import ClientLayout from "../components/clientLayout";
 
-const nunito = Nunito({
-  subsets: ['latin'],
-  weight: ['300', '400', '600', '700'],
-  variable: '--font-nunito',
-  display: 'swap',
-})
+
 
 
 
@@ -22,7 +17,7 @@ export default function RootLayoutViews({
   return (
     
       
-         <div className={`${nunito.variable} antialiased`}>
+         <div >
           <ClientLayout>{children}</ClientLayout>
         </div>
      

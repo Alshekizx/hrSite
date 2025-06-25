@@ -70,7 +70,7 @@ const BlogIndexPage = () => {
       <div className='containerDiv'>
 
         {/* Top Filters */}
-  <div className="sticky mb-5 top-30 z-10 px-4 flex justify-end">
+  <div className="sticky mb-5 top-25 z-10 px-4 flex justify-end">
   <div className="flex flex-wrap gap-4 items-center">
     {topFilters.map((filter) => (
       <button
@@ -106,7 +106,7 @@ const BlogIndexPage = () => {
         <div className="flex w-full px-4 gap-8">
           {/* Side Filters */}
           <aside className="hidden lg:block w-1/4">
-            <div className="sticky top-30 space-y-2">
+            <div className="sticky top-25 space-y-2">
               {sideFilters.map((filter) => (
                 <button
                   key={filter}

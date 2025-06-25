@@ -218,7 +218,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
   return (
     <header className="bg-[var(--header-color)] flex flex-col items-center text-[var(--text-dark)] shadow-sm fixed top-0 w-full z-50">
       <div className=' max-w-[1400px] w-full  '>
-      <div className="py-5 px-4 lg:px-10 flex justify-between items-center">
+      <div className="py-4 px-4  flex justify-between items-center">
         {/* Logo and Icons */}
         <div className="flex items-center space-x-2">
           <div className='hidden md:flex flex-row gap-2 items-center'>
