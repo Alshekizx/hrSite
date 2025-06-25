@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 import { ArrowRightIcon, ArrowLeftIcon} from "@heroicons/react/24/solid";
 import Link from "next/link";
-import { services } from "@/app/industries/sectorData";
+import { services } from "@/app/views/industries/sectorData";
 
 export default function SectorsWeCover() {
   const cardWidth = 350;
@@ -130,7 +130,7 @@ const scroll = (direction: "left" | "right") => {
                         {service.details}
                       </p>
                       <Link
-                        href={`/industries/${service.slug}`}
+                        href={`/views/industries/${service.slug}`}
                         className="mt-1 flex items-center gap-2 text-[var(--primary-300)] hover:underline"
                       >
                         <h3>Learn more</h3>

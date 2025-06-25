@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import HeroSection from "../components/ourHrServiceComponent/heroSection";
+import HeroSection from "../../components/ourHrServiceComponent/heroSection";
 
 const navLinks = [
   { name: "Terms Of Service", href: "/termsAndConditions" },

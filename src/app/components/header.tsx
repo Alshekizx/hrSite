@@ -75,14 +75,14 @@ export default function Header() {
         {isDropdownOpen && (
           <div className="absolute right-0 mt-2 w-40 bg-[var(--header-color)] border rounded shadow-lg z-50 text-sm">
             <Link
-              href="/myApplications"
+              href="/views/myApplications"
               className="block px-4 py-2 hover:text-[var(--primary-color)] text-[var(--text-dark)]"
               style={{fontSize:'18px'}}
             >
               My Applications
             </Link>
             <Link
-              href="/myProfile"
+              href="/views/myProfile"
               style={{fontSize:'18px'}}
               className="block px-4 py-2 hover:text-[var(--primary-color)] text-[var(--text-dark)]"
             >
@@ -113,7 +113,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
   return (
     <>
-      <Link href="/" style={{fontSize:'18px'}} className={linkClass('/')} onClick={closeMenu}>
+      <Link href="/view/" style={{fontSize:'18px'}} className={linkClass('/')} onClick={closeMenu}>
         Home
       </Link>
 
@@ -143,7 +143,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
       {/* HR and Employment Law Advisory */}
       <Link
-        href="/ourHrServices"
+        href="/views/ourHrServices"
         className="flex items-start gap-3 p-3 rounded-md bg-[var(--primary-100)] hover:bg-[var(--primary-200)] transition"
         onClick={closeMenu}
       >
@@ -160,7 +160,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
       {/* HR Documents & Contracts */}
       <Link
-        href="/ourHrServices/hRDocumentsContracts"
+        href="/views/ourHrServices/hRDocumentsContracts"
         className="flex items-start gap-3 p-3 rounded-md bg-[var(--primary-100)] hover:bg-[var(--primary-200)] transition"
         onClick={closeMenu}
       >
@@ -184,7 +184,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 </div>
 
       <Link
-        href="/ourHrExperties"
+        href="/views/ourHrExperties"
         style={{fontSize:'18px'}}
         className={linkClass('/ourHrExperties')}
         onClick={closeMenu}
@@ -192,7 +192,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
         Our HR Expertise
       </Link>
       <Link
-        href="/prices"
+        href="/views/prices"
         style={{fontSize:'18px'}}
         className={linkClass('/prices')}
         onClick={closeMenu}
@@ -200,7 +200,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
         Pricing
       </Link>
       <Link
-        href="/blog"
+        href="/views/blog"
         style={{fontSize:'18px'}}
         className={linkClass('/blog')}
         onClick={closeMenu}
@@ -231,7 +231,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
             />
           <ChevronRightIcon className="h-10 w-10  text-[var(--text-muted)]" />
          </div>
-           <Link href="/" className="flex items-center ">
+           <Link href="/views/" className="flex items-center ">
             <Image
               src="/logos/MployusHRLogo.png"
               alt="Logo"

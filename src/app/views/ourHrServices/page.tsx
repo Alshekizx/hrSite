@@ -1,10 +1,10 @@
 'use client';
 
-import HrSection from "../components/ourHrServiceComponent/hrSolution1";
-import HrServicesGrid from "../components/homepage/tailoredHiringSolutions";
-import HrSectionInverse from "../components/ourHrServiceComponent/hrSolutionInvrese";
-import HrSection2 from "../components/ourHrServiceComponent/hrSolution2";
-import HeroSection from "../components/ourHrServiceComponent/heroSection";
+import HrSection from "../../components/ourHrServiceComponent/hrSolution1";
+import HrServicesGrid from "../../components/homepage/tailoredHiringSolutions";
+import HrSectionInverse from "../../components/ourHrServiceComponent/hrSolutionInvrese";
+import HrSection2 from "../../components/ourHrServiceComponent/hrSolution2";
+import HeroSection from "../../components/ourHrServiceComponent/heroSection";
 import Image from "next/image";
 
 

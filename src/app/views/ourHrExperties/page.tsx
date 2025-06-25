@@ -1,7 +1,7 @@
 'use client';
-import HeroSection from "../components/ourHrServiceComponent/heroSection";
-import AnotherHrSection2 from "../components/ourHrServiceComponent/anotherHrSolution2";
-import ContactForm2 from "../components/ourHrServiceComponent/contactUs2";
+import HeroSection from "../../components/ourHrServiceComponent/heroSection";
+import AnotherHrSection2 from "../../components/ourHrServiceComponent/anotherHrSolution2";
+import ContactForm2 from "../../components/ourHrServiceComponent/contactUs2";
 export default function OurHrExperties() {
  
 const hrData = {

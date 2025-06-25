@@ -367,3 +367,19 @@ p {
   outline: none;
   box-shadow: 0 0 0 2px var(--tw-ring-color); /* this mimics `focus:ring-2` */
 }
+
+
+.bg-vertical-waves {
+  background-color: #06367e;
+  background-image:
+    radial-gradient(100% 100% at 50% -30%, #013781 60%, transparent 21%),
+    radial-gradient(100% 100% at 50% -10%, #043B86 60%, transparent 21%),
+    radial-gradient(100% 100% at 50% 10%, #043E8C 60%, transparent 21%),
+    radial-gradient(100% 100% at 50% 30%, #043B86 60%, transparent 21%),
+    radial-gradient(100% 100% at 50% 50%, #013781 60%, transparent 21%),
+    radial-gradient(100% 100% at 50% 70%, #043B86 60%, transparent 21%),
+    radial-gradient(100% 100% at 50% 90%, #043E8C 60%, transparent 21%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}

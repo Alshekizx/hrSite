@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
-import BlogCard from '../components/blogComponent/blogCard';
+import BlogCard from '@/app/components/blogComponent/blogCard';
 import { blogData } from './blogSampleData';
-import HeroSection from '../components/ourHrServiceComponent/heroSection';
-import FreeDownloadCard from '../components/blogComponent/freeDownload';
+import HeroSection from '@/app/components/ourHrServiceComponent/heroSection';
+import FreeDownloadCard from '@/app/components/blogComponent/freeDownload';
 
 const topFilters = ['All', 'Case Study', 'Management Guide', 'Free Download'];
 const sideFilters = [
@@ -70,7 +70,7 @@ const BlogIndexPage = () => {
       <div className='containerDiv'>
 
         {/* Top Filters */}
-        <div className="sticky mb-5 top-20 z-10 px-4 flex justify-end">
+  <div className="sticky mb-5 top-30 z-10 px-4 flex justify-end">
   <div className="flex flex-wrap gap-4 items-center">
     {topFilters.map((filter) => (
       <button
@@ -106,7 +106,7 @@ const BlogIndexPage = () => {
         <div className="flex w-full px-4 gap-8">
           {/* Side Filters */}
           <aside className="hidden lg:block w-1/4">
-            <div className="sticky top-20 space-y-2">
+            <div className="sticky top-30 space-y-2">
               {sideFilters.map((filter) => (
                 <button
                   key={filter}

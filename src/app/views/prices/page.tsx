@@ -1,7 +1,7 @@
 "use client";
 
 import { JSX, useState } from "react";
-import HeroSection from "../components/ourHrServiceComponent/heroSection";
+import HeroSection from "../../components/ourHrServiceComponent/heroSection";
 import { pricingPlans, PricingPlan, featureDetails } from "./priceData";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/20/solid";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";

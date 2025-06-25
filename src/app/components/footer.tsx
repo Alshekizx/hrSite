@@ -49,12 +49,12 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/" className="footerLinks">Home</Link></li>
-            <li><Link href="/ourHrServices" className="footerLinks">Our HR Services</Link></li>
-            <li><Link href="/ourHrExperties" className="footerLinks">Our HR Expertise</Link></li>
-            <li><Link href="/blog" className="footerLinks">Prices</Link></li>
-            <li><Link href="/blog" className="footerLinks">Blog</Link></li>
-            <li><Link href="/contactUs" className="footerLinks">Contact Us</Link></li>
+            <li><Link href="/views/" className="footerLinks">Home</Link></li>
+            <li><Link href="/views/ourHrServices" className="footerLinks">Our HR Services</Link></li>
+            <li><Link href="/views/ourHrExperties" className="footerLinks">Our HR Expertise</Link></li>
+            <li><Link href="/views/blog" className="footerLinks">Prices</Link></li>
+            <li><Link href="/views/blog" className="footerLinks">Blog</Link></li>
+            <li><Link href="/views/contactUs" className="footerLinks">Contact Us</Link></li>
           </ul>
         </div>
 
@@ -88,17 +88,17 @@ const Footer = () => {
           <h4 className="font-semibold mb-4">Legal</h4>
           <ul className="space-y-2 text-sm">
            <li>
-    <Link href="/privacyPolicy" className="hover:underline">
+    <Link href="/views/privacyPolicy" className="hover:underline">
       Privacy Statement
     </Link>
   </li>
   <li>
-    <Link href="/termsAndConditions" className="hover:underline">
+    <Link href="/views/termsAndConditions" className="hover:underline">
       Terms and Conditions
     </Link>
   </li>
   <li>
-    <Link href="/cookiesPolicy" className="hover:underline">
+    <Link href="/views/cookiesPolicy" className="hover:underline">
       Cookies Policy
     </Link>
   </li>
@@ -140,10 +140,16 @@ const Footer = () => {
       
 
       <div className="mt-4">
-        <div className="bg-[#ffffff55] border border-white text-black px-10 py-2 rounded-md inline-flex items-center gap-2">
-          <span className="text-xl">🇮🇪</span>
-          <span>Ireland</span>
-          <ChevronDownIcon className="w-4 h-4 ml-1 text-black" />
+        <div className="relative w-fit">
+          <select
+            className="bg-[#ffffff55] border border-white text-black px-4 py-2 pr-10 rounded-md appearance-none cursor-pointer"
+            defaultValue="ireland"
+            onChange={(e) => console.log("Selected:", e.target.value)}
+          >
+            <option value="ireland">🇮🇪 Ireland</option>
+            <option value="uk">🇬🇧 United Kingdom</option>
+          </select>
+          <ChevronDownIcon className="w-4 h-4 absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
         </div>
 
         <p className='mt-2'>Download our HR Mobile App</p>
