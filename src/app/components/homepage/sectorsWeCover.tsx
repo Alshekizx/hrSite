@@ -81,12 +81,11 @@ const scroll = (direction: "left" | "right") => {
         </div>
 
         <div
-          className="relative overflow-hidden"
+          className="relative overflow-hidden "
           style={{
             backgroundImage: `url(${extendedServices[selectedIndex]?.bgImage || ''})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            imageRendering: "auto",
           }}
         >
           <div className="absolute inset-0 bg-black/20 z-0"></div>

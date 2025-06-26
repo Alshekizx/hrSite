@@ -36,7 +36,7 @@ export const services: Sector[] = [
     slug: "professionalServices",
     details:
         "We help professional service businesses with HR strategy, recruitment, and legal compliance.",
-      bgImage: "/images/professionalServices.png",
+      bgImage: "/images/professionalServices.jpg",
     sections: [
       {
         heading: "Tailored HR for Skilled Professionals",
@@ -55,7 +55,7 @@ export const services: Sector[] = [
     slug: "techStartupsSMEs",
     details:
         "We support tech startups with agile HR practices and recruitment tailored for fast growth.",
-      bgImage: "/images/techStartupsSMEs.png",
+      bgImage: "/images/techStartupsSMEs.jpg",
     sections: [
       {
         heading: "Agile HR for Fast-Moving Companies",
@@ -74,7 +74,7 @@ export const services: Sector[] = [
     slug: "retail",
     details:
         "We help retail businesses with compliant contracts, shift scheduling, and employee concerns.",
-      bgImage: "/images/retail.png",
+      bgImage: "/images/retail.jpg",
       sections: [
       {
         heading: "Keeping Your Storefront Compliant and Staffed",
@@ -93,7 +93,7 @@ export const services: Sector[] = [
     slug: "construction",
      details:
         "We support construction firms with skilled staffing, contract compliance, and shift planning.",
-      bgImage: "/images/construction.png",
+      bgImage: "/images/construction.jpg",
     sections: [
       {
         heading: "HR Compliance on and off Site",
@@ -112,7 +112,7 @@ export const services: Sector[] = [
     slug: "logisticsTransport",
    details:
         "We optimize logistics and transport businesses with efficient workforce management.",
-      bgImage: "/images/logistics.png",
+      bgImage: "/images/logistics.jpg",
     sections: [
       {
         heading: "Keeping the Wheels Turning Legally",
@@ -131,7 +131,7 @@ export const services: Sector[] = [
     slug: "nonprofitsNGOs",
     details:
         "We help nonprofit organizations & NGOs with compliant contracts, shift scheduling, and HR support.",
-      bgImage: "/images/nonprofitsNGOs.png",
+      bgImage: "/images/nonprofitsNGOs.jpg",
     sections: [
       {
         heading: "Mission-Driven HR Support",
@@ -150,7 +150,7 @@ export const services: Sector[] = [
     slug: "healthcare",
     details:
         "We help healthcare businesses with compliant contracts, shift scheduling, and employee concerns.",
-      bgImage: "/images/healthcare.png",
+      bgImage: "/images/healthcare.jpg",
     
       sections: [
       {
