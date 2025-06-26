@@ -113,7 +113,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
   return (
     <>
-      <Link href="/view/" style={{fontSize:'18px'}} className={linkClass('/')} onClick={closeMenu}>
+      <Link href="/views/" style={{fontSize:'18px'}} className={linkClass('/')} onClick={closeMenu}>
         Home
       </Link>
 
