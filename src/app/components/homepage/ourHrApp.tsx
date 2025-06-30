@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function OuHrApps() {
   return (
     <div className="containerDiv flex flex-col items-center justify-center relative" style={{ minHeight: '100vh' }}>
-      <div className="flex flex-col lg:flex-row bg-[var(--primary-color)] w-full px-10 lg:py-5  rounded-lg  text-white card-texture-bg ">
+      <div className="flex flex-col lg:flex-row bg-[var(--primary-color)] w-full px-10 rounded-lg  text-white card-texture-bg ">
 
   {/* Text Section */}
   <div className="w-full md:w-2/3 flex flex-col gap-6 justify-center py-6 sm:py-10">

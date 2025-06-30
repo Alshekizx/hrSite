@@ -20,7 +20,7 @@ const ContactForm = () => {
             </label>
             <input
               type="text"
-              className="w-full p-3 border border-[var(--primary-color)] border-1 bg-[var(--primary-100)] custom-ring-color"
+              className="w-full p-3 border border-[var(--primary-300)] border-1 bg-[var(--primary-100)] custom-ring-color"
             />
           </div>
           <div>
@@ -29,7 +29,7 @@ const ContactForm = () => {
             </label>
             <input
               type="text"
-              className="w-full p-3 border border-[var(--primary-color)] border-1 bg-[var(--primary-100)] custom-ring-color"
+              className="w-full p-3 border border-[var(--primary-300)] border-1 bg-[var(--primary-100)] custom-ring-color"
             />
           </div>
           <div>
@@ -38,7 +38,7 @@ const ContactForm = () => {
             </label>
             <input
               type="text"
-              className="w-full p-3 border border-[var(--primary-color)] border-1 bg-[var(--primary-100)] custom-ring-color"
+              className="w-full p-3 border border-[var(--primary-300)] border-1 bg-[var(--primary-100)] custom-ring-color"
             />
           </div>
           <div>
@@ -47,7 +47,7 @@ const ContactForm = () => {
             </label>
             <input
               type="email"
-              className="w-full p-3 border border-[var(--primary-color)] border-1 bg-[var(--primary-100)] custom-ring-color"
+              className="w-full p-3 border border-[var(--primary-300)] border-1 bg-[var(--primary-100)] custom-ring-color"
             />
           </div>
           <div className="md:col-span-2">
@@ -56,7 +56,7 @@ const ContactForm = () => {
             </label>
             <input
               type="tel"
-              className="w-full p-3 border border-[var(--primary-color)] border-1 bg-[var(--primary-100)] custom-ring-color"
+              className="w-full p-3 border border-[var(--primary-300)] border-1 bg-[var(--primary-100)] custom-ring-color"
             />
           </div>
           <div className="md:col-span-2">
@@ -64,7 +64,7 @@ const ContactForm = () => {
              <p style={{fontSize:'24px'}}> Drop a Message:</p>
             </label>
             <textarea
-            className="w-full p-3 border border-[var(--primary-color)] border-1 bg-[var(--primary-100)] custom-ring-color min-h-[80px]"
+            className="w-full p-3 border border-[var(--primary-300)] border-1 bg-[var(--primary-100)] custom-ring-color min-h-[80px]"
           ></textarea>
           </div>
           <div className="md:col-span-2">

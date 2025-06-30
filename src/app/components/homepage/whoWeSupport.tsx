@@ -54,7 +54,7 @@ export default function WhoWeSupport() {
           </ul>
         </div>
 
-        <p className="text-[var(--text-muted)] leading-relaxed mt-3 text-base">
+        <p className="text-[var(--text-dark)] leading-relaxed mt-3 text-base">
           We act as your trusted HR partner, offering support tailored to your needs. 
           From contracts and handbooks to employee relations, absence management, 
           performance issues, and compliance, we ensure you&apos;re protected and proactive.
