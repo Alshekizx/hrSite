@@ -216,11 +216,11 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
 
   return (
-    <header className="bg-[var(--header-color)] flex flex-col items-center text-[var(--text-dark)] shadow-sm fixed top-0 w-full z-50">
+    <header className="bg-[var(--header-color)] flex flex-col items-center text-[var(--text-dark)] shadow-sm fixed top-0 w-full z-50 py-2">
       <div className=' max-w-[1400px] w-full  '>
-      <div className="py-4 px-4  flex justify-between items-center">
+      <div className="py-4 px-[2rem] lg:px-[5rem] flex justify-between items-center">
         {/* Logo and Icons */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-end space-x-2">
           <div className='hidden md:flex flex-row gap-2 items-center'>
           <Image
               src="/images/home1.png"
@@ -237,7 +237,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
               alt="Logo"
               width={186}
               height={56}
-              className="h-full"
+              className="h-[56px]"
             />
           </Link>
         </div>

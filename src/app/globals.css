@@ -116,7 +116,7 @@
 
 body {
   font-family: var(--font-nunito), sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--text-dark);
   line-height: 1.2;
@@ -124,16 +124,15 @@ body {
 
 h1, h2{
   
-  line-height: 1.2;
   color: var(--text-dark);
 }
 
 h1 {
-  font-size: 50px; /* 3rem */
+  font-size: 54px; /* 3rem */
 }
 
 h2 {
-  font-size: 40px; /* 2.5rem */
+  font-size: 44px; /* 2.5rem */
   color: var(--primary-color);
 }
 
@@ -143,7 +142,7 @@ h3 {
 }
 
 p {
-  font-size: 20px; /* 1.125rem */
+  font-size: 18px; /* 1.125rem */
 }
 
  .links{
@@ -303,18 +302,18 @@ p {
 }
 
 .containerDiv{
-  padding: 2rem;
+  padding: 2rem 5rem;
   min-height: 50vh;
   width: 100%;
   max-width: 1400px;
   
 }
-
 @media (max-width: 768px) {
   .containerDiv {
     padding: 2rem;
   }
 }
+
 
 .bg_themed_color{
   background-image: var(--background-light);;

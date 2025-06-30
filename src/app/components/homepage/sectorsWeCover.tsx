@@ -65,7 +65,7 @@ const scroll = (direction: "left" | "right") => {
       </div>
 
       <div className="relative w-full">
-        <div className="flex top-1/2 left-0 right-0 absolute z-20 justify-between items-center mb-6 px-4">
+        <div className="flex top-4/10 left-0 right-0 absolute z-20 justify-between items-center mb-6 px-4">
           <button
             onClick={() => scroll("left")}
             
@@ -88,11 +88,11 @@ const scroll = (direction: "left" | "right") => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/20 z-0"></div>
+          <div className="absolute inset-0 bg-black/40 z-0"></div>
           <h1  className="absolute top-10 left-10 z-30  " style={{color:"#ffffffbb", fontWeight:'bold', fontSize:'94px' }}>Industries</h1>
           <div
             ref={scrollRef}
-            className="relative scrollbar-hide  flex w-full z-10"
+            className="relative scrollbar-hide  flex w-full z-10 "
             style={{
               overflowX: "auto",
               scrollBehavior: "smooth",
@@ -103,7 +103,7 @@ const scroll = (direction: "left" | "right") => {
   return (
     <div
       key={index}
-      className={`min-w-[350px] h-[110vh] p-6 border transition-all duration-300 ease-in-out ${
+      className={`min-w-[350px] h-[110vh] py-6 px-6 lg:px-10 border transition-all duration-300 ease-in-out ${
         index === selectedIndex
           ? "bg-black/70 border-white/20"
           : "bg-transparent border-white/20"
