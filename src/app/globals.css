@@ -30,7 +30,7 @@
   --background-light: linear-gradient(135deg, #f2f6fc 0%, #e8f1ff 100%);
   
   --text-dark: #212529;      /* For strong headings */
-  --text-muted: #6C757D;     /* Muted paragraph text */
+  --text-muted: #212529;     /* Muted paragraph text */
   
   --card-bg: #ffffff;
   --card-Trans: #F5F9FFCC;  /* Semi-transparent card background */
@@ -142,7 +142,7 @@ h3 {
 }
 
 p {
-  font-size: 18px; /* 1.125rem */
+  font-size: 20px; /* 1.125rem */
 }
 
  .links{

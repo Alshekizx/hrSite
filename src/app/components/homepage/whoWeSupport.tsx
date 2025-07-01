@@ -29,7 +29,7 @@ export default function WhoWeSupport() {
 
       {/* Text Section */}
       <div className="w-full lg:w-6/10 flex flex-col">
-        <div style={{lineHeight:'1'}}>
+        <div style={{lineHeight:'1', fontSize:'18px'}} className="mb-6">
           <h3 className="text-[var(--primary-color)]  font-bold mb-4">
             Who We Support
           </h3>

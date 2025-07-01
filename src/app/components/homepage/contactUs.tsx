@@ -9,7 +9,7 @@ const ContactForm = () => {
     >
       <div className="containerDiv flex flex-col lg:flex-row gap-10 items-stretch">
       {/* Left: Form Section */}
-      <div className="form-container w-full lg:w-1/2 border border-[var(--primary-color)] bg-white rounded-t-lg overflow-hidden flex flex-col">
+      <div className="form-container w-full lg:w-1/2 border border-[var(--primary-color)] bg-white rounded-t-xl overflow-hidden flex flex-col">
         <p className="p-6 font-semibold bg-[var(--primary-color)] text-white" style={{fontSize:'28px'}}>
           Speak with an expert
         </p>

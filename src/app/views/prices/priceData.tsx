@@ -55,7 +55,7 @@ export type PlanCategory = 'HR Software' | 'HR Support' | 'HR Software & HR Supp
 
 export interface PricingPlan {
   name: string;
-  price: string;
+  price: number;
   billing: string;
   description: string;
   softwareIncluded: string[];
@@ -73,7 +73,7 @@ export interface PricingPlan {
 export const pricingPlans: PricingPlan[] = [
   {
     name: 'CORE',
-    price: '€5.99',
+    price: 5.99,
     billing: 'per employee per month ',
     description: 'Providing vital tools necessary for efficient workforce management.',
     softwareIncluded: ['Finance Software', 'Recruitment Software', 'Business Software'],
@@ -128,7 +128,7 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'ESSENTIALS',
-    price: '€5.99',
+    price: 5.99,
     billing: 'per employee per month ',
     description: 'We boost productivity and enhance the overall work experience for all team members.',
     softwareIncluded: ['Finance Software', 'Recruitment Software', 'Business Software'],
@@ -183,7 +183,7 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'ADVANCED',
-    price: '€15.99',
+    price: 15.99,
     billing: 'per employee per month ',
     description: 'Providing advanced HR tools and expert support tailored for your business.',
     softwareIncluded: ['Finance Software', 'Recruitment Software', 'Business Software'],

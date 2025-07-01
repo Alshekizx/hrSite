@@ -50,7 +50,7 @@ export default function HrSectionInverse({
         {/* Text content */}
         <div ref={contentRef} className="flex flex-col gap-6 justify-center h-fit">
           <h3 className="text-3xl text-[var(--primary-color)]">{title}</h3>
-          <p className="text-[var(--text-muted)] " style={{fontSize:'24px'}}>{description}</p>
+          <p className="text-[var(--text-muted)] " >{description}</p>
 
           <ul className="space-y-6">
             {features.map((feature, idx) => (
@@ -60,7 +60,7 @@ export default function HrSectionInverse({
                   aria-hidden="true"
                 />
                 <div>
-                  <p className="text-[var(--text-muted)]"  style={{fontSize:'24px'}}>
+                  <p className="text-[var(--text-muted)]"  >
                   <strong className="text-[var(--primary-color)]">{feature.title}</strong>{' '}
                   – {feature.description}</p>
                 </div>

@@ -33,9 +33,9 @@ export default function HrSection2({
     <section className="bg-[var(--background-light)] containerDiv" style={{padding:'auto 100px ', minHeight: '50px'}}>
       <div className="flex flex-col md:flex-row gap-10 justify-center items-center ">
         <div ref={leftRef} className="flex flex-col gap-6 justify-center h-fit">
-          {title && <h3 className="text-3xl text-[var(--primary-color)]"  style={{fontSize:'24px'}}>{title}</h3>}
+          {title && <h3 className="text-3xl text-[var(--primary-color)]" >{title}</h3>}
           {description && (
-            <p className="text-[var(--text-muted)] text-lg"  style={{fontSize:'24px'}}>{description}</p>
+            <p className="text-[var(--text-muted)] text-lg" >{description}</p>
           )}
 
           <ul className="space-y-6">
@@ -46,7 +46,7 @@ export default function HrSection2({
                   aria-hidden="true"
                 />
                 <div>
-                  <p className="text-[var(--text-muted)] "  style={{fontSize:'24px'}}>
+                  <p className="text-[var(--text-muted)] " >
                   <strong className="text-[var(--primary-color)]">{feature.title}</strong>{' '}
                   
                     – {feature.description}

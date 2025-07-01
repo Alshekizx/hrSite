@@ -63,7 +63,8 @@ const PricesPage = () => {
   const [expandedPlans, setExpandedPlans] = useState<Record<number, boolean>>({});
   const [openDropdownFeature, setOpenDropdownFeature] = useState<string | null>(null);
   const [showFeatureComparison, setShowFeatureComparison] = useState(false);
-  
+  const [employeeCount, setEmployeeCount] = useState<number | ''>('');
+
    const toggleExpand = (index: number) => {
     setExpandedPlans((prev) => ({
       ...prev,
@@ -89,8 +90,14 @@ const PricesPage = () => {
             <div className="flex overflow-hidden rounded-full border border-[var(--secondary-300)]">
               <input
                 type="number"
+                min="1"
                 placeholder="Enter number of employee"
                 className="px-4 py-2 text-sm outline-none w-60 placeholder:text-gray-400"
+                value={employeeCount}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setEmployeeCount(value === '' ? '' : parseInt(value));
+                }}
               />
               <button className="button">
                 View Price
@@ -143,9 +150,19 @@ const PricesPage = () => {
                   
                       <span style={{fontSize:'14px'}}>From</span>
                      
-                    <div className="flex flex-row items-center">
-                        <h1 className="text-[var(--primary-color)]" style={{fontSize:'60px'}}>
-                          {plan.price}
+                    <div className="flex flex-row flex-wrap items-center">
+                        <h1
+                          className="text-[var(--primary-color)]"
+                          style={{
+                            fontSize: '60px',
+                            lineHeight: 1.1,
+                            wordBreak: 'break-word',
+                          }}
+                        >
+                          €
+                          {employeeCount
+                            ? (plan.price * Number(employeeCount)).toLocaleString()
+                            : plan.price.toLocaleString()}
                         </h1>
                         <div className="flex flex-col">
                           <span style={{fontSize:'14px'}}>{plan.billing}</span>
