@@ -113,7 +113,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
   return (
     <>
-      <Link href="/views/" style={{fontSize:'18px'}} className={linkClass('/')} onClick={closeMenu}>
+      <Link href="/views/" style={{fontSize:'18px'}} className={linkClass('/views')} onClick={closeMenu}>
         Home
       </Link>
 
@@ -122,6 +122,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
           onClick={(e) => {
             e.stopPropagation();
             setIsHrDropdownOpen((prev) => !prev);
+
           }}
           style={{fontSize:'18px'}} className=" transition flex items-center space-x-1"
         >
@@ -141,11 +142,13 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
     <div className="md:absolute md:left-[-110px] flex flex-col p-4 w-full md:min-w-[370px] h-fit gap-2 bg-white mt-2 md:mt-16 z-50 shadow-lg">
       <p className="text-[var(--primary-color)] font-semibold">Our HR Services</p>
 
+
       {/* HR and Employment Law Advisory */}
       <Link
         href="/views/ourHrServices"
-        className="flex items-start gap-3 p-3 rounded-md bg-[var(--primary-100)] hover:bg-[var(--primary-200)] transition"
+        className="flex items-start gap-3 p-3 rounded-md bg-[var(--primary-100)] hover:bg-[var(--primary-200)] transition "
         onClick={closeMenu}
+        
       >
         <div>
           <span className="flex gap-2 font-bold text-md text-[var(--text-dark)]">
@@ -186,7 +189,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       <Link
         href="/views/ourHrExperties"
         style={{fontSize:'18px'}}
-        className={linkClass('/ourHrExperties')}
+        className={linkClass('/views/ourHrExperties')}
         onClick={closeMenu}
       >
         Our HR Expertise
@@ -194,7 +197,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       <Link
         href="/views/prices"
         style={{fontSize:'18px'}}
-        className={linkClass('/prices')}
+        className={linkClass('/views/prices')}
         onClick={closeMenu}
       >
         Pricing
@@ -202,7 +205,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       <Link
         href="/views/blog"
         style={{fontSize:'18px'}}
-        className={linkClass('/blog')}
+        className={linkClass('/views/blog')}
         onClick={closeMenu}
       >
         Blog
