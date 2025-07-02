@@ -9,6 +9,7 @@ import AnotherHrSection from "@/app/components/ourHrServiceComponent/anotherHrSo
 import AnotherHrSectionInverse from "@/app/components/ourHrServiceComponent/anotherInverseHrSolution";
 import HrSection3 from "@/app/components/ourHrServiceComponent/hrsolution3";
 import Image from "next/image";
+import Link from "next/link";
 
 const serviceData = {
   headline: 'HR Contracts & Handbooks',
@@ -167,7 +168,7 @@ export default function OurHrServices2() {
           <p className="text-[var(--primary-color)] font-bold max-w-[800px]">
            Select the plan that best fits your team’s needs and take the next step by requesting a free demo to experience how it works in real time.
           </p>
-          <button className="button2" style={{borderRadius:'5px'}}>View Plans & Request Demo</button>
+          <Link className="button2" style={{borderRadius:'5px'}} href='/views/prices'>View Plans & Request Demo</Link>
       </div>
 
     

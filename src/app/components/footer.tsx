@@ -62,11 +62,11 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Our Services</h4>
           <ul className="space-y-2 text-sm">
-            <li>MployUs HR Advice</li>
-            <li>Recruitment Support</li>
-            <li>Locums Provision</li>
-            <li>HR Software & Mobile App</li>
-            <li>Locum Software & Mobile App</li>
+            <li><Link href="/views/ourHrServices" className="footerLinks">MployUs HR Advice</Link></li>
+            <li><Link href="https://recruitment.mployus.ie/views" className="footerLinks">Recruitment Support</Link></li>
+            <li><Link href="https://locum.mployus.ie/views" className="footerLinks">Locums Provision</Link></li>
+            <li><Link href="/views/prices" className="footerLinks">HR Software & Mobile App</Link></li>
+            <li><Link href="/views/prices" className="footerLinks">Locum Software & Mobile App</Link></li>
           </ul>
         </div>
 
@@ -74,12 +74,12 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Our Products</h4>
           <ul className="space-y-2 text-sm">
-            <li>MployUs HR Software</li>
-            <li>Recruitment Software</li>
-            <li>MployUs Locums</li>
-            <li>HR Software & Mobile App</li>
-            <li>Locum Software & Mobile App</li>
-            <li>Finance Management Software</li>
+            <li><Link className="footerLinks" rel="stylesheet" href="/views/" >MployUs HR Software </Link></li>
+            <li><Link className="footerLinks" rel="stylesheet" href="https://recruitment.mployus.ie/views" >Recruitment Software</Link></li>
+            <li><Link className="footerLinks" rel="stylesheet" href="https://locum.mployus.ie/views" >MployUs Locums</Link></li>
+            <li><Link className="footerLinks" rel="stylesheet" href="/views/prices" >HR Software & Mobile App</Link></li>
+            <li><Link className="footerLinks" rel="stylesheet" href="/views/prices" >Locum Software & Mobile App</Link></li>
+            <li><Link className="footerLinks" rel="stylesheet" href="/views/prices" >Finance Management Software</Link></li>
           </ul>
         </div>
 
@@ -88,18 +88,13 @@ const Footer = () => {
           <h4 className="font-semibold mb-4">Legal</h4>
           <ul className="space-y-2 text-sm">
            <li>
-    <Link href="/views/privacyPolicy" className="hover:underline">
+    <Link href="/views/termsAndConditions/privacyPolicy" className="hover:underline">
       Privacy Statement
     </Link>
   </li>
   <li>
     <Link href="/views/termsAndConditions" className="hover:underline">
       Terms and Conditions
-    </Link>
-  </li>
-  <li>
-    <Link href="/views/cookiesPolicy" className="hover:underline">
-      Cookies Policy
     </Link>
   </li>
           </ul>

@@ -427,7 +427,7 @@ const legalTerms: LegalSection[] = [
 ];
 
 export default function PrivacyPolicy() {
-  const [activeTab, setActiveTab] = useState("Agreement");
+  const [activeTab, setActiveTab] = useState("Privacy Policy");
     const tabs = [
       { name: "Privacy Policy", section: legalSections },
       { name: "Software Use and User Rights", section: softwareUseandUserRights },

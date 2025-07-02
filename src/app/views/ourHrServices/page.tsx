@@ -6,6 +6,7 @@ import HrSectionInverse from "../../components/ourHrServiceComponent/hrSolutionI
 import HrSection2 from "../../components/ourHrServiceComponent/hrSolution2";
 import HeroSection from "../../components/ourHrServiceComponent/heroSection";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -182,7 +183,7 @@ export default function OurHrServices1() {
                <p className="text-[var(--primary-color)] font-bold max-w-[800px]">
                 Select the plan that best fits your team’s needs and take the next step by requesting a free demo to experience how it works in real time.
                </p>
-               <button className="button2" style={{borderRadius:'5px'}}>View Plans & Request Demo</button>
+               <Link className="button2" style={{borderRadius:'5px'}} href='/views/prices'>View Plans & Request Demo</Link>
            </div>
     
     </div>

@@ -26,6 +26,9 @@ export default function RootLayout({
   return (
     <AuthProvider>
       <html lang="en">
+         <head>
+          <link rel="icon" href="/logos/logo-icon.png" type="image/png" />
+        </head>
          <body className={`${nunito.variable} antialiased`}>
           {children}
         </body>

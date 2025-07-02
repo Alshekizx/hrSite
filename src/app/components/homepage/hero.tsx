@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { StarIcon } from '@heroicons/react/24/solid';
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -47,8 +48,8 @@ export default function Hero() {
       </div>
 
         <div className="flex gap-4">
-          <button className="button">Speak to an expert</button>
-          <button className="inverseButton">View Services and Pricing</button>
+          <Link className="button" href='/views/contactUs'>Speak to an expert</Link>
+          <Link href='/views/prices' className="inverseButton">View Services and Pricing</Link>
         </div>
       </div>
 

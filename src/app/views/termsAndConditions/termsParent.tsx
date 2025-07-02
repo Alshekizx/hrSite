@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 import HeroSection from "../../components/ourHrServiceComponent/heroSection";
 
 const navLinks = [
-  { name: "Terms Of Service", href: "/termsAndConditions" },
-  { name: "Privacy Policy", href: "/termsAndConditions/privacyPolicy" },
-  { name: "Data Protection", href: "/termsAndConditions/dataProtection" },
-  { name: "Data Processing Statement", href: "/termsAndConditions/dataProcessingStatement" },
+  { name: "Terms Of Service", href: "/views/termsAndConditions" },
+  { name: "Privacy Policy", href: "/views/termsAndConditions/privacyPolicy" },
+  { name: "Data Protection", href: "/views/termsAndConditions/dataProtection" },
+  { name: "Data Processing Statement", href: "/views/termsAndConditions/dataProcessingStatement" },
 ];
 
 export default function TermParent({ children }: { children: React.ReactNode }) {
