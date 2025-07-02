@@ -223,7 +223,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       <div className=' max-w-[1400px] w-full  '>
       <div className="py-4 px-[2rem] lg:px-[5rem] flex justify-between items-center">
         {/* Logo and Icons */}
-        <div className="flex items-end space-x-2">
+        <div className="flex items-center space-x-2">
           <div className='hidden md:flex flex-row gap-2 items-center'>
           <Image
               src="/images/home1.png"
