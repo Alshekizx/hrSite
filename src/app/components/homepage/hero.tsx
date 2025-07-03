@@ -56,7 +56,7 @@ export default function Hero() {
       {/* Fixed height to allow Image fill to work correctly */}
     <div className="w-full h-full lg:static md:relative ">
       <Image
-        src="/images/hrPc.png"
+        src="/images/hrPc1.png"
         alt="Team Hero Pic"
         width={676} 
         height={670} 
