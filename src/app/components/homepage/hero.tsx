@@ -60,7 +60,7 @@ export default function Hero() {
         alt="Team Hero Pic"
         width={676} 
         height={670} 
-        className="lg:absolute right-0 top-[5%] w-full lg:w-[50%]   object-contain h-full "
+        className="lg:absolute right-0 top-[4%] w-full lg:w-[50%]   object-contain h-full "
         priority
       />
   </div>
